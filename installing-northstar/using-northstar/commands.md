@@ -1,197 +1,197 @@
-# 命令
+# 游戏内指令
 
 ## 开启控制台
 
-所有的命令，再无特殊说明的情况下都应在控制台输入. 为了启动它, 按下 `` ` `` (该键位于 `TAB` 上方).\
-注意控制台只能被位于英文模式下的键盘输入触发 (ANSI US, ISO UK, ...).
+在游戏中, 按下键盘上 `` ` ``键，该键位于 `TAB` 上方，数字键`1`左侧，`ESC`下方
 
-例如德文键盘中此键位于 `BACKSPACE` 左侧，但是按下此键无法触发控制台.
+若您在使用部分小语种输入法时按下`` ` ``键无法呼出控制台，请将输入法切换至ENG(英语)或者中文(拼音)
 
-为了正确触发控制台，请在游戏 **运行前** 将键盘布局切换至 英语 (美国) .
 
-<!--
-注：译者目前未在任何中文键盘上遇到此问题，但以防万一任保留此处
--->
+### 更换控制台呼出按键
+控制台只可绑定在 ```"`"``` 或功能键 ```"F1" - "F12"``` 上，其余按键绑定后并无效果
 
-### 重绑定触发按键
-请确保您的北极星是最新版本.
-控制台仅可绑定在 ```"`"``` 或功能键 ```"F1" - "F12"``` 中.
-
-定位至 `Controls > Settings > Key Binds` 使用其中的 `"Toggle Developer Console"` 绑定控制台.
+在游戏中，找到设置/Settings `控制 / Controls > 键鼠 / MOUSE/KEYBOARD > 按键绑定 / Key Bindings` ，更改首行 `"Toggle Developer Console"` 所绑定的按键即可
 
 ---
 
-如果 `"Toggle Developer Console"` 选项不存在，您可能会需要禁用所有非 `Northstar.` 开头的Mod 或者手动绑定该按键.
+如需手动绑定，打开 `C:\Users\(此处为您的Win用户名)\Documents\Respawn\Titanfall2\local` 中的 `settings.cfg`.\
+找到 `toggleconsole` 一行，若cfg中不存在该指令，您应该手动写入
 
-如需手动绑定，在 官服/北极星 均关闭的情况下，定位到 `My Documents\Respawn\Titanfall2\local\` 中的 `settings.cfg`.\
-寻找包含 `toggleconsole` 的那一行, 例如：
-
-```txt
+例如
+```
 bind "`" "toggleconsole"
 ```
 
-并将 `` ` `` 替换为您需要的按键. 比如说您想以 `F5` 打开控制台, 将该行更改为
+`"  "`中可以填写我们想要绑定的按键，此处我们将按键绑定至F4键上
 
-```txt
-bind "F5" "toggleconsole"
 ```
+bind "F4" "toggleconsole"
+```
+之后保存cfg，重新进入游戏即可
 
 ## 命令列表
 
-### Northstar Commands
+### NorthStarCN附加指令
 
 | 命令                              | 描述                                                                                                 | 接受值                                           |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| `ns_masterserver_hostname`           | Masterserver URL                                                                                            | 默认为 `https://nscn.wolf109909.top`                |
-| `ns_auth_allow_insecure`             | 允许客户端在不与主服务器验证的情况下加入游戏                                                | `0` / `1`                                       |
-| `connect`                            | 直接连接至某一Northstar 服务器                                                                  | `<ip address>:<port>` 例: `localhost:37015`     |
-| `reload_mods`                        | 重载 mods                                                                                                 |                                                 |
-| `ns_disallowed_tacticals`            | 禁止使用的铁驭技能                                                                | 例: `"mp_ability_grapple,mp_ability_heal"` |
-| `ns_disallowed_tactical_replacement` | 替换禁止使用的铁驭技能为                                               | 例: `"mp_ability_grapple"`                      |
-| `give mp_weapon_peacekraber`         | 给予你 peacekraber （和平捍卫者?）                                                                                       |                                                 |
-| `r_latencyflex`                      | 启用 [LatencyFleX](../../using-northstar/playing-on-linux/#latencyflex) (Linux-only, 默认启用) | `0` / `1`                                       |
+| `ns_masterserver_hostname`           | 主服务器URL                                                                                            | `https://nscn.wolf109909.top`                |
+| `ns_auth_allow_insecure`             | 是否允许客户端不与主服务器验证也可通过`connect`指令加入游戏                                                | `0` / `1`                                       |
+| `connect`                            | 连接至某一未启用验证的服务器，需要填写IP地址与端口号，若未填写端口则默认为37015                                                                | `<ip address>:<port>` 例: `3.3.3.3:37725`     |
+| `reload_mods`                        | 重新加载 MODS                                                                                                 |                                                 |
+| `ns_disallowed_tacticals`            | 禁止使用的铁驭战术技能                                                                | 例: `"mp_ability_grapple,mp_ability_heal"` |
+| `ns_disallowed_tactical_replacement` | 替换禁止使用的铁驭战术技能为"  "                                               | 例: `"mp_ability_grapple"`                      |
+| `give mp_weapon_peacekraber`         | 给予 玩家一把peacekraber，这是一把测试武器，使用了kraber的模型，即Apex Legends中的和平捍卫者                                                                                     |                                                 |
+| `r_latencyflex`                      | 是否启用 [LatencyFleX](../../using-northstar/playing-on-linux/#latencyflex) (这是一个针对Linux端玩家的选项，仅在Linux环境下可以开启，开启前需要安装前置环境) | `0` / `1`                                       |
 
-### Useful dev commands
+### 部分开发测试指令
 
-需要 `sv_cheats 1`
 
-Command|作用
+需要先在控制台执行 `sv_cheats 1` ，然后才能使用以下指令
+
+指令|作用
+
+`thirdperson`|切换至第三人称模式
+`firstperson`|切换至第一人称模式
+
+> 以下部分指令仅在您是游戏房主时才会生效，即您使用您的主机开启了私人对战房间，该房间是在您的电脑上本地运行的，所以您可以执行这些开发测试指令
 -|-
-`thirdperson`|第三人称模式
-`script DevSpawnTitan()`|生成你的泰坦
-`script SetGameEndTime(1200.0)`|将剩余比赛时间设置为1200秒
-`ent_create npc_soldier`|在准星处生成步枪兵
-`ent_create npc_stalker`|在准星处生成幽灵战士
-`ent_create npc_spectre`|在准星处生成潜行者
-`ent_create npc_titan`|在准星处生成泰坦 (Warning as of v1.4.0, this crashes your game if you don't have your own titan)
-`ent_create npc_marvin`|在准星处生成马文
-`ent_fire !picker setteam 2`|Sets entity at crosshair to team 2
+`script DevSpawnTitan()`|在您的位置上生成您在选择页面所装备的泰坦
+`script SetGameEndTime(1200.0)`|将比赛剩余时间设置为1200秒
+`ent_create npc_soldier`|在准星处生成NPC步兵
+`ent_create npc_stalker`|在准星处生成NPC幽灵战士
+`ent_create npc_spectre`|在准星处生成NPC潜行者
+`ent_create npc_titan`|在准星处生成NPC泰坦
+`ent_create npc_marvin`|在准星处生成NPC马文
+`ent_fire !picker setteam 2`|将准星处实体所属阵营设置为IMC
 
-### Server commands
+`1`为测试阵营，对IMC和MIL均中立，`2`为IMC，`3`为MIL
+
+### 服务端指令
 
 | 命令                                    | 描述                                                           | 默认值 |
 | ------------------------------------------- | --------------------------------------------------------------------- | ------- |
-| `sv_cheats`                                 | Whether players can use cheat commands (i.e. noclip) .                 | 0       |
-| `sv_AllWaysSupportsSaveRestore`             |                                                                       | 0       |
-| `sv_allTicksFinal`                          |                                                                       | 0       |
-| `sv_allowSendTableTransmitToClients`        |                                                                       | 1       |
+| `sv_cheats`                                 | 是否允许玩家使用作弊指令                 | 0       |
+| `sv_AllWaysSupportsSaveRestore`             | Dev / Debug                                                                       | 0       |
+| `sv_allTicksFinal`                          | Dev / Debug                                                                | 0       |
+| `sv_allowSendTableTransmitToClients`        | Dev / Debug                                                                        | 1       |
 | `sv_alltalk`                                | 是否启用全局语音.             | 0       |
-| `sv_balanceTeams`                           | 服务器是否会在对局间尝试平衡队伍. | 1       |
-| `sv_bounds_show_errors`                     |                                                                       | 0       |
-| `sv_clampPlayerFrameTime`                   |                                                                       | 0       |
-| `sv_clockcorrection`                        |                                                                       | 1       |
-| `sv_clockcorrection_msecs`                  |                                                                       | 75      |
-| `sv_compressPlaylists`                      |                                                                       | 1       |
-| `sv_connectingClientDelay`                  |                                                                       | 3       |
-| `sv_debug_deferred_trace`                   |                                                                       | 0       |
-| `sv_debug_deferred_trace_overlay`           |                                                                       | 0       |
-| `sv_debug_prop_send`                        |                                                                       | 0       |
-| `sv_debugmanualmode`                        |                                                                       | 0       |
-| `sv_disconnectOnTooManySnapshotFrames`      |                                                                       | 1       |
-| `sv_dumpstringtables`                       |                                                                       | 0       |
-| `sv_earlyPersistenceRead`                   |                                                                       | 0       |
-| `sv_edgefriction`                           |                                                                       | 2       |
-| `sv_everyThirdTick`                         |                                                                       | 0       |
-| `sv_extra_client_connect_time`              |                                                                       | 60      |
-| `sv_gravity`                                | 服务器重力                                 | 750     |
-| `sv_hibernate_ms`                           |                                                                       | 5       |
-| `sv_hibernate_ms_vgui`                      |                                                                       | 5       |
-| `sv_hibernate_postgame_delay`               |                                                                       | 5       |
-| `sv_hibernate_when_empty`                   | 服务器是否在无人时休眠.                        | 0       |
-| `sv_instancebaselines`                      |                                                                       | 1       |
-| `sv_kickPlayersTooFarInFuture`              | Whether to kick players whose internal time is too far in the future.  | 1       |
-| `sv_lerpAnims`                              |                                                                       | 1       |
-| `sv_lobbyType`                              |                                                                       | 1       |
-| `sv_massreport`                             |                                                                       | 0       |
-| `sv_maxUserCmdsPerPlayerPerFrame`           |                                                                       | 10      |
-| `sv_max_prop_data_dwords_lobby`             |                                                                       | 100000  |
-| `sv_max_prop_data_dwords_multiplayer`       |                                                                       | 125000  |
-| `sv_max_prop_data_dwords_singleplayer`      |                                                                       | 300000  |
-| `sv_max_props_lobby`                        |                                                                       | 50000   |
-| `sv_max_props_multiplayer`                  |                                                                       | 75000   |
-| `sv_max_props_singleplayer`                 |                                                                       | 200000  |
-| `sv_max_snapshots_lobby`                    |                                                                       | 100     |
-| `sv_max_snapshots_multiplayer`              |                                                                       | 300     |
-| `sv_max_snapshots_singleplayer`             |                                                                       | 10      |
-| `sv_maxclientframes`                        |                                                                       | 300     |
-| `sv_maxrate`                                |                                                                       | 0       |
-| `sv_maxroutable`                            |                                                                       | 1200    |
-| `sv_maxupdaterate`                          |                                                                       | 60      |
-| `sv_minrate`                                |                                                                       | 128000  |
-| `sv_minupdaterate`                          |                                                                       | 20      |
-| `sv_noclipaccelerate`                       | noclip 加速度.                                 | 10000   |
-| `sv_noclipduringpause`                      | 服务器暂停时是否进入noclip状态.                                 | 0       |
-| `sv_noclipspeed`                            |  noclip 速度.                                                 | 5       |
-| `sv_normalSimulationCommandThreshold`       |                                                                       | 3       |
-| `sv_parallel_sendsnapshot`                  |                                                                       | 1       |
-| `sv_partyDediOnly`                          |                                                                       | 0       |
-| `sv_pausable`                               |                                                                       | 0       |
-| `sv_physics_maxvelocity`                    |                                                                       | 4000.0  |
-| `sv_playerNameAppendCheater`                |                                                                       | 1       |
-| `sv_playerSimTimeBuffer`                    |                                                                       | 0       |
-| `sv_precacheinfo`                           |                                                                       |         |
-| `sv_printClockCorrections`                  |                                                                       | 0       |
-| `sv_printClockTiming`                       |                                                                       | 0       |
-| `sv_props_funnel_into_portals`              |                                                                       | 1       |
-| `sv_props_funnel_into_portals_deceleration` |                                                                       | 2.0f    |
-| `sv_querylimit_per_sec`                     |                                                                       | 10      |
-| `sv_quota_stringcmdspersecond`              |                                                                       | 60      |
-| `sv_rcon_banpenalty`                        |                                                                       | 0       |
-| `sv_rcon_log`                               | 是否记录 RCON 命令.                                          | 1       |
-| `sv_rcon_maxfailures`                       |                                                                       | 10      |
-| `sv_rcon_minfailures`                       |                                                                       | 5       |
-| `sv_rcon_minfailuretime`                    |                                                                       | 30      |
-| `sv_regeneration_wait_time`                 |                                                                       | 20.0    |
-| `sv_rejectClientConnects`                   |                                                                       | 0       |
-| `sv_rejectConnections`                      |                                                                       | 0       |
-| `sv_robust_explosions`                      |                                                                       | 1       |
-| `sv_scarySnapDeltaPrints`                   |                                                                       | 50      |
-| `sv_screenShake_enabled`                    |                                                                       | 1       |
-| `sv_script_think_interval`                  |                                                                       | 0.1     |
-| `sv_sendPlaylists`                          |                                                                       | 1       |
-| `sv_separate_freq_change_prop_send`         |                                                                       | 1       |
-| `sv_shiftPlayerSimTimeBackwards`            |                                                                       | 1       |
-| `sv_showClientTickCmds`                     |                                                                       | 0       |
-| `sv_showLargeSnapshotSize`                  |                                                                       | 10000   |
-| `sv_showLargeSnapshots`                     |                                                                       | 0       |
-| `sv_showUserCmds`                           |                                                                       | 0       |
-| `sv_show_placement_help_in_preview`         |                                                                       | 0       |
-| `sv_showents`                               |                                                                       | 0       |
-| `sv_showfiredbullets`                       |                                                                       | 0       |
-| `sv_showhitboxes`                           |                                                                       | -1      |
-| `sv_showlagcompensation`                    |                                                                       | 0       |
-| `sv_shutdown`                               | 停止服务器.                                                |         |
-| `sv_single_core_dedi`                       |                                                                       | 0       |
-| `sv_skyname`                                |                                                                       |         |
-| `sv_soundscape_printdebuginfo`              |                                                                       |         |
-| `sv_specaccelerate`                         |                                                                       | 1000.0  |
-| `sv_specnoclip`                             |                                                                       | 1       |
-| `sv_specspeed`                              |                                                                       | 5       |
-| `sv_stats`                                  |                                                                       | 1       |
-| `sv_stressbots`                             |                                                                       | 1       |
-| `sv_strugglecheck`                          |                                                                       | 1.016   |
-| `sv_teststepsimulation`                     |                                                                       | 0       |
-| `sv_thinktimecheck`                         |                                                                       | 0       |
-| `sv_threaded_post_process_ai`               |                                                                       | 1       |
-| `sv_threaded_post_process_players`          |                                                                       | 1       |
-| `sv_turbophysics`                           |                                                                       | 1       |
-| `sv_turbophysics_player`                    |                                                                       | 1       |
-| `sv_unnecessaryConnectDelay`                |                                                                       | 60      |
-| `sv_updaterate_mp`                          |                                                                       | 20      |
-| `sv_updaterate_sp`                          |                                                                       | 20      |
-| `sv_useReputation`                          |                                                                       | 1       |
-| `sv_use_edgefriction`                       |                                                                       | 1       |
-| `sv_usercmd_before_entities`                |                                                                       | 1       |
-| `sv_usercmd_fairness_dediOnly`              |                                                                       | 0       |
-| `sv_usercmd_max_queued`                     |                                                                       | 40      |
-| `sv_usercmd_num_per_iteration`              |                                                                       | 1       |
-| `sv_usercmd_shuffle_players`                |                                                                       | 1       |
-| `sv_visiblemaxplayers`                      |                                                                       | -1      |
-| `sv_visualizetraces`                        |                                                                       | 0       |
-| `sv_visualizetraces_duration`               |                                                                       | 0.5     |
-| `sv_voiceDebug`                             |                                                                       | 0       |
-| `sv_voiceEcho`                              |                                                                       | 0       |
-| `sv_voiceenable`                            |                                                                       | 1       |
-| `sv_warnAboutCmdNumJumps`                   |                                                                       | 20      |
-| `sv_weapon_despawn_time`                    |                                                                       | 90      |
-| `sv_writeSendTableStreamFile`               |                                                                        |         |
+| `sv_balanceTeams`                           | 是否让服务器在对局间尝试平衡队伍. | 1       |
+| `sv_bounds_show_errors`                     | Dev / Debug                                                                      | 0       |
+| `sv_clampPlayerFrameTime`                   | Dev / Debug                                                                        | 0       |
+| `sv_clockcorrection`                        | Dev / Debug                                                                        | 1       |
+| `sv_clockcorrection_msecs`                  | Dev / Debug                                                                        | 75      |
+| `sv_compressPlaylists`                      | Dev / Debug                                                                        | 1       |
+| `sv_connectingClientDelay`                  | Dev / Debug                                                                        | 3       |
+| `sv_debug_deferred_trace`                   | Dev / Debug                                                                        | 0       |
+| `sv_debug_deferred_trace_overlay`           | Dev / Debug                                                                        | 0       |
+| `sv_debug_prop_send`                        | Dev / Debug                                                                        | 0       |
+| `sv_debugmanualmode`                        | Dev / Debug                                                                      | 0       |
+| `sv_disconnectOnTooManySnapshotFrames`      | Dev / Debug                                                                      | 1       |
+| `sv_dumpstringtables`                       | Dev / Debug                                                                      | 0       |
+| `sv_earlyPersistenceRead`                   | Dev / Debug                                                                      | 0       |
+| `sv_edgefriction`                           | Dev / Debug                                                                      | 2       |
+| `sv_everyThirdTick`                         | Dev / Debug                                                                      | 0       |
+| `sv_extra_client_connect_time`              | Dev / Debug                                                                      | 60      |
+| `sv_gravity`                                | 游戏内物理重力数值，默认为`750`                                | 750     |
+| `sv_hibernate_ms`                           | Dev / Debug                                                                      | 5       |
+| `sv_hibernate_ms_vgui`                      | Dev / Debug                                                                      | 5       |
+| `sv_hibernate_postgame_delay`               | Dev / Debug                                                                      | 5       |
+| `sv_hibernate_when_empty`                   | 服务器是否在房间内无玩家时自动休眠，在有玩家尝试加入时会自动唤醒，启用该项可以在无玩家时节约服务器资源消耗                        | 0       |
+| `sv_instancebaselines`                      | Dev / Debug                                                                      | 1       |
+| `sv_kickPlayersTooFarInFuture`              | Dev / Debug  | 1       |
+| `sv_lerpAnims`                              | Dev / Debug                                                                      | 1       |
+| `sv_lobbyType`                              | Dev / Debug                                                                      | 1       |
+| `sv_massreport`                             | Dev / Debug                                                                      | 0       |
+| `sv_maxUserCmdsPerPlayerPerFrame`           | Dev / Debug                                                                      | 10      |
+| `sv_max_prop_data_dwords_lobby`             | Dev / Debug                                                                      | 100000  |
+| `sv_max_prop_data_dwords_multiplayer`       | Dev / Debug                                                                      | 125000  |
+| `sv_max_prop_data_dwords_singleplayer`      | Dev / Debug                                                                      | 300000  |
+| `sv_max_props_lobby`                        | Dev / Debug                                                                      | 50000   |
+| `sv_max_props_multiplayer`                  | Dev / Debug                                                                      | 75000   |
+| `sv_max_props_singleplayer`                 | Dev / Debug                                                                      | 200000  |
+| `sv_max_snapshots_lobby`                    | Dev / Debug                                                                      | 100     |
+| `sv_max_snapshots_multiplayer`              | Dev / Debug                                                                      | 300     |
+| `sv_max_snapshots_singleplayer`             | Dev / Debug                                                                     | 10      |
+| `sv_maxclientframes`                        | Dev / Debug                                                                      | 300     |
+| `sv_maxrate`                                | Dev / Debug                                                                      | 0       |
+| `sv_maxroutable`                            | Dev / Debug                                                                      | 1200    |
+| `sv_maxupdaterate`                          | Dev / Debug                                                                      | 60      |
+| `sv_minrate`                                | Dev / Debug                                                                      | 128000  |
+| `sv_minupdaterate`                          | Dev / Debug                                                                      | 20      |
+| `sv_noclipaccelerate`                       | 启用`noclip`指令后玩家的加速度.                                 | 10000   |
+| `sv_noclipduringpause`                      | 是否允许服务器暂停后，客户端启用`noclip`指令，启用后客户端玩家仅可移动自己的视角，而玩家实体无法在三维空间内移动，因为此时服务器运算完全暂停，这是一个仅用于测试的指令                                 | 0       |
+| `sv_noclipspeed`                            | 启用`noclip`指令后玩家的移动最大速度.                                                 | 5       |
+| `sv_normalSimulationCommandThreshold`       | Dev / Debug                                                                      | 3       |
+| `sv_parallel_sendsnapshot`                  | Dev / Debug                                                                      | 1       |
+| `sv_partyDediOnly`                          | Dev / Debug                                                                      | 0       |
+| `sv_pausable`                               | 设置服务器是否可以暂停，若设置为1，则可在控制台输入pause来暂停服务器，此时服务器运算会完全暂停，客户端不会丢失与服务器的连接                                                                      | 0       |
+| `sv_physics_maxvelocity`                    | Dev / Debug                                                                      | 4000.0  |
+| `sv_playerNameAppendCheater`                | Dev / Debug                                                                      | 1       |
+| `sv_playerSimTimeBuffer`                    | Dev / Debug                                                                      | 0       |
+| `sv_precacheinfo`                           | Dev / Debug                                                                      |         |
+| `sv_printClockCorrections`                  | Dev / Debug                                                                      | 0       |
+| `sv_printClockTiming`                       | Dev / Debug                                                                      | 0       |
+| `sv_props_funnel_into_portals`              | Dev / Debug                                                                      | 1       |
+| `sv_props_funnel_into_portals_deceleration` | Dev / Debug                                                                      | 2.0f    |
+| `sv_querylimit_per_sec`                     | Dev / Debug                                                                      | 10      |
+| `sv_quota_stringcmdspersecond`              | Dev / Debug                                                                     | 60      |
+| `sv_rcon_banpenalty`                        | Dev / Debug                                                                      | 0       |
+| `sv_rcon_log`                               | 是否将RCON命令执行记录到LOG中                                          | 1       |
+| `sv_rcon_maxfailures`                       | Dev / Debug                                                                      | 10      |
+| `sv_rcon_minfailures`                       | Dev / Debug                                                                      | 5       |
+| `sv_rcon_minfailuretime`                    | Dev / Debug                                                                      | 30      |
+| `sv_regeneration_wait_time`                 | Dev / Debug                                                                      | 20.0    |
+| `sv_rejectClientConnects`                   | Dev / Debug                                                                      | 0       |
+| `sv_rejectConnections`                      | Dev / Debug                                                                      | 0       |
+| `sv_robust_explosions`                      | Dev / Debug                                                                      | 1       |
+| `sv_scarySnapDeltaPrints`                   | Dev / Debug                                                                      | 50      |
+| `sv_screenShake_enabled`                    | Dev / Debug                                                                      | 1       |
+| `sv_script_think_interval`                  | Dev / Debug                                                                      | 0.1     |
+| `sv_sendPlaylists`                          | Dev / Debug                                                                      | 1       |
+| `sv_separate_freq_change_prop_send`         | Dev / Debug                                                                      | 1       |
+| `sv_shiftPlayerSimTimeBackwards`            | Dev / Debug                                                                      | 1       |
+| `sv_showClientTickCmds`                     | Dev / Debug                                                                      | 0       |
+| `sv_showLargeSnapshotSize`                  | Dev / Debug                                                                      | 10000   |
+| `sv_showLargeSnapshots`                     | Dev / Debug                                                                      | 0       |
+| `sv_showUserCmds`                           | Dev / Debug                                                                      | 0       |
+| `sv_show_placement_help_in_preview`         | Dev / Debug                                                                      | 0       |
+| `sv_showents`                               | Dev / Debug                                                                      | 0       |
+| `sv_showfiredbullets`                       | Dev / Debug                                                                      | 0       |
+| `sv_showhitboxes`                           | Dev / Debug                                                                      | -1      |
+| `sv_showlagcompensation`                    | Dev / Debug                                                                      | 0       |
+| `sv_shutdown`                               | 关闭服务器，与stop效果等同                                               |         |
+| `sv_single_core_dedi`                       | Dev / Debug                                                                      | 0       |
+| `sv_skyname`                                | Dev / Debug                                                                      |         |
+| `sv_soundscape_printdebuginfo`              | Dev / Debug                                                                      |         |
+| `sv_specaccelerate`                         | Dev / Debug                                                                      | 1000.0  |
+| `sv_specnoclip`                             | Dev / Debug                                                                      | 1       |
+| `sv_specspeed`                              | Dev / Debug                                                                      | 5       |
+| `sv_stats`                                  | Dev / Debug                                                                      | 1       |
+| `sv_stressbots`                             | Dev / Debug                                                                      | 1       |
+| `sv_strugglecheck`                          | Dev / Debug                                                                      | 1.016   |
+| `sv_teststepsimulation`                     | Dev / Debug                                                                      | 0       |
+| `sv_thinktimecheck`                         | Dev / Debug                                                                      | 0       |
+| `sv_threaded_post_process_ai`               | Dev / Debug                                                                      | 1       |
+| `sv_threaded_post_process_players`          | Dev / Debug                                                                      | 1       |
+| `sv_turbophysics`                           | Dev / Debug                                                                      | 1       |
+| `sv_turbophysics_player`                    | Dev / Debug                                                                      | 1       |
+| `sv_unnecessaryConnectDelay`                | Dev / Debug                                                                      | 60      |
+| `sv_updaterate_mp`                          | 此指令在Convar全局变量中已经提及，此处不再赘述                                                                      | 20      |
+| `sv_updaterate_sp`                          | Dev / Debug                                                                      | 20      |
+| `sv_useReputation`                          | Dev / Debug                                                                      | 1       |
+| `sv_use_edgefriction`                       | Dev / Debug                                                                      | 1       |
+| `sv_usercmd_before_entities`                | Dev / Debug                                                                      | 1       |
+| `sv_usercmd_fairness_dediOnly`              | Dev / Debug                                                                      | 0       |
+| `sv_usercmd_max_queued`                     | Dev / Debug                                                                      | 40      |
+| `sv_usercmd_num_per_iteration`              | Dev / Debug                                                                      | 1       |
+| `sv_usercmd_shuffle_players`                | Dev / Debug                                                                      | 1       |
+| `sv_visiblemaxplayers`                      | Dev / Debug                                                                      | -1      |
+| `sv_visualizetraces`                        | Dev / Debug | 0       |
+| `sv_visualizetraces_duration`               | Dev / Debug                                                                      | 0.5     |
+| `sv_voiceDebug`                             | Dev / Debug                                                                      | 0       |
+| `sv_voiceEcho`                              | Dev / Debug                                                                      | 0       |
+| `sv_voiceenable`                            | Dev / Debug                                                                      | 1       |
+| `sv_warnAboutCmdNumJumps`                   | Dev / Debug                                                                      | 20      |
+| `sv_weapon_despawn_time`                    | Dev / Debug                                                                      | 90      |
+| `sv_writeSendTableStreamFile`               | Dev / Debug                                                                       |         |

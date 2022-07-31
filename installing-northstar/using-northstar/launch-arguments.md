@@ -1,31 +1,27 @@
-# 启动参数
+# 启动项
 
-这里展示的是北极星客户端新引入的启动参数, 其值应包括在 `ns_startup_args.txt` 或 `ns_startup_args_dedi.txt` 中.
+客户端启动项应写入 `ns_startup_args.txt` 中.
 
-|         参数         |               描述              |            接受值            |
+|         启动项         |               描述              |            接受值            |
 | :----------------: | :---------------------------: | :-----------------------: |
-|   `-disablelogs`   |          禁用日志与日志文件的写入         |                           |
-|     `-vanilla`     |            阻止北极星的加载           |                           |
-|    `-northstar`    |            启用北极星加载            |                           |
-|    `-dedicated`    |       以独立服务器模式（无视频输出）启动       |                           |
-|     `-language`    |           强制指定客户端的语言          |   语言字符串 例如: `portuguese`  |
-| `-waitfordebugger` |        在调试程序附加到游戏之后再运行游戏      |                           |
-|     `-profile=`    | 用一个特殊的配置文件夹. 默认值: R2Northstar | 例如: `-profile="dev mods"` |
-| `-enablechathooks` |        为 Mod 启用chathook       |                           |
+|   `-disablelogs`   |          禁用日志记录         |                           |
+|     `-vanilla`     |            启动原版游戏           |                           |
+|    `-northstar`    |            启动北极星            |                           |
+|    `-dedicated`    |       以独立服务器模式（无图形界面）启动       |                           |
+|     `-language`    |           指定客户端的语言          | 例如: `portuguese`，`english`  |
+| `-waitfordebugger` |        启动时等待调试程序附加到游戏，完成HOOK后再运行游戏      |                           |
+|     `-profile=`    | 您可以创建多个不同版本的R2Northstar文件夹的副本，并为这些文件夹重新命名，在启动时可以加入该启动项指定加载哪一个文件夹的配置文件，默认值: R2Northstar | 例如: `-profile="devR2"` |
+| `-enablechathooks` |        将聊天框与控制台连接，允许玩家在聊天框执行指令，部分MOD会要求您加入该启动项       |                           |
 
 #### 起源自带的启动参数
 
 |     参数     |     描述    | 接受值 |
 | :--------: | :-------: | :-: |
-|  `-novid`  | 禁用启动页介绍视频 |     |
-| `-nosound` |  禁用所有游戏声音 |     |
+|  `-novid`  | 禁用启动页视频 |     |
+| `-nosound` |  禁用游戏声音 |     |
 
-#### `环境变量`
+#### Linux可选指令
 
 |  变量名  |                                 描述                                |     接受值    |
 | :---: | :---------------------------------------------------------------: | :--------: |
 | `LFX` | 启用 [LatencyFleX](../playing-on-linux.md#latencyflex) (Linux-only) | `0` or `1` |
-
-``
-
-``

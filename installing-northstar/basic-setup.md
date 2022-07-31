@@ -1,4 +1,4 @@
-# 安装&启动
+# 安装&启动&更新
 
 ## 安装NorthStarCN
 
@@ -32,7 +32,7 @@
 
 ## Linux
 
-Linux的安装请参考 [这里](installing-northstar/playing-on-linux.md#如何在🐧Linux发行版上游玩NorthStarCN(TODO)).
+Linux请参考 [这里](installing-northstar/playing-on-linux.md#如何在🐧Linux发行版上游玩NorthStarCN(TODO)).
 TODO.
 Awaiting Editing.
 
