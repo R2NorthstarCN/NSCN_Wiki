@@ -20,8 +20,8 @@
 |  `-novid`  | 禁用启动页视频 |     |
 | `-nosound` |  禁用游戏声音 |     |
 
-#### Linux可选指令
+#### Linux可选参数
 
 |  变量名  |                                 描述                                |     接受值    |
 | :---: | :---------------------------------------------------------------: | :--------: |
-| `LFX` | 启用 [LatencyFleX](../playing-on-linux.md#latencyflex) (Linux-only) | `0` or `1` |
+| `LFX` | 启用 [LatencyFleX](../playing-on-linux.md#latencyflex) (仅Linux可用，启用前需要安装前置环境) | `0` or `1` |
