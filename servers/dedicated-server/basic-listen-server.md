@@ -99,9 +99,9 @@ IP地址填写PC在局域网中分配到的IP地址，此处为`192.168.31.131`
 
 若房间长时间未出现在浏览器中，您可以先在PC上打开命令提示符(CMD)，分别输入`netstat -ano | findstr "37015"`和`netstat -ano | findstr "8081"`来查看进程是否在本机上正确监听这两个端口
 
-![37015](https://wiki.northstar.cool/assets/37015.PNG)
+![37015](https://wiki.northstar.cool/assets/37015.png)
 
-![8081](https://wiki.northstar.cool/assets/8081.PNG)
+![8081](https://wiki.northstar.cool/assets/8081.png)
 
 若输入查询指令后并无结果返回，则应首先检查您是否已经关闭防火墙或是否已经添加防火墙相对应的允许规则
 
