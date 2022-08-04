@@ -1,4 +1,4 @@
-# 在 Linux 上搭建独立服务器
+# 在Linux上搭建独立服务器
 > **this page is on editing phase at present**
 > **此页尚未完成编辑**
 

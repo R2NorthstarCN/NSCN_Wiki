@@ -1,4 +1,3 @@
-
 # 如何在🐧Linux发行版上游玩NorthStarCN (TODO)
 > **this page is on editing phase at present**
 > **此页尚未完成编辑**
@@ -24,7 +23,7 @@
 
  除了重命名 _NorthstarLauncher.exe_ 这一方法, 你也可以通过在两个exe文件之间创建一个软链接让未来更新NorthStarCN版本的时候稍微轻松一些. 在TTF2游戏根目录执行以下命令即可:
 
-```markdown
+```
 ln NorthstarLauncher.exe Titanfall2.exe
 ```
 

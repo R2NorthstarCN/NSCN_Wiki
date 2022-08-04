@@ -30,13 +30,13 @@
 -multiple -novid -high
 ```
 
-## Linux
+## Linux平台游玩
 
 Linux请参考 [这里](installing-northstar/playing-on-linux.md#如何在🐧Linux发行版上游玩NorthStarCN(TODO)).
 TODO.
 Awaiting Editing.
 
-## SteamDeck
+## SteamDeck平台游玩
 
 TODO.
 Awaiting Editing.
