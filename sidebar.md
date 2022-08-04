@@ -5,3 +5,4 @@
 * [服务器环境要求](servers/dedicated-server/basic-requirements.md)
 * [Linux服务器](servers/dedicated-server/hosting-on-linux.md)
 * [TEST](servers/dedicated-server/README.md)
+* [Server-Hosting](servers/dedicated-server/basic-listen-server.md)
