@@ -1,6 +1,7 @@
 
 # 如何在🐧Linux发行版上游玩NorthStarCN (TODO)
 > **this page is on editing phase at present**
+> **此页尚未完成编辑**
 
 > 如您所见，NorthStarCN和TTF2均不是为Linux发行版所编写和构建的软件，所以为了在POSIX类系统上运行这些程序，我们需要使用像Proton和Wine这样的兼容层来进行。
 

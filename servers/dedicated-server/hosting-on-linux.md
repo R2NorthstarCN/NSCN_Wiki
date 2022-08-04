@@ -1,5 +1,5 @@
 # 在 Linux 上搭建独立服务器
-
+> **this page is on editing phase at present**
 > **此页尚未完成编辑**
 
 > 在Linux发行版环境中搭建独立服务器目前可用途径只有使用[wine](https://www.winehq.org/)来运行服务端，在这一基础上我们也可以使用Docker来构建镜像，预置运行环境，实现即开即用以及多实例与集群管理。

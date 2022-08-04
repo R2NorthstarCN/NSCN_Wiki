@@ -5,11 +5,11 @@
 ## 配置文件
 
 * `.\ns_startup_args_dedi.txt` 
-  包含服务器的 [启动项](./#startup-arguments)
+  包含服务器的 [启动项](./servers/dedicated-server/README#启动项)
 * `. R2Northstar\mods\Northstar.CustomServers\mod.json` 
-  保存着 [全局变量](./#convars) 的默认参数
+  保存着 [全局变量](./servers/dedicated-server/README#全局变量) 的默认参数
 * `. R2Northstar\mods\Northstar.CustomServers\mod\cfg\autoexec_ns_server.cfg` 
-  保存着 [全局变量](./#convars) 的自定义参数，该文件在游戏加载时将覆盖上方的默认参数
+  保存着 [全局变量](./servers/dedicated-server/README#全局变量) 的自定义参数，该文件在游戏加载时将覆盖上方的默认参数
 
 
 
@@ -22,15 +22,15 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 
 | 启动项                         | 接受值                                                           | 描述                                                                                        |
 | -------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `+setplaylist`             | 参考 [Gamemodes](./#gamemodes) (应该与 `mp_gamemode` 相同,除非您想要私人比赛) | 设置服务器类型 (如果其不是 `private_match`, 那么请确保 `+map` 已正确应用且 **不是** `mp_lobby` 否则您可能无法在一下子发现您的服务器) |
-| `+setplaylistvaroverrides` | 参考 [PlaylistOverrides](./#playlist-overrides)                 | 设置服务器的各种行为                                                                                |
+| `+setplaylist`             | 参考 [游戏模式](./servers/dedicated-server/README#游戏模式) (应该与 `mp_gamemode` 相同,除非您想要私人比赛) | 设置服务器类型 (如果其不是 `private_match`, 那么请确保 `+map` 已正确应用且 **不是** `mp_lobby` 否则您可能无法在一下子发现您的服务器) |
+| `+setplaylistvaroverrides` | 参考 [游戏参数覆写](./servers/dedicated-server/README#游戏参数覆写)                 | 设置服务器的各种行为                                                                                |
 | `-port`                    | `1-65535` 之间的整数值                                              | 设置服务器监听的UDP端口                                                                             |
-| `+mp_gamemode`             | 参考 [Gamemodes](./#gamemodes)                                  | 强制服务器载入某一模式                                                                               |
-| `+map`                     | 参考 [Maps](./#maps) (如不指定，则为 `mp_lobby`)                       | 强制服务器载入特定初始地图                                                                             |
+| `+mp_gamemode`             | 参考 [游戏模式](./servers/dedicated-server/README#游戏模式)                                  | 强制服务器载入某一模式                                                                               |
+| `+map`                     | 参考 [游戏地图](./servers/dedicated-server/README#游戏地图) (如不指定，则为 `mp_lobby`)                       | 强制服务器载入特定初始地图                                                                             |
 
 | 特殊项                  | 描述                                                    |
 | --------------------- | ----------------------------------------------------- |
-| `-maxplayersplaylist` | 允许 [PlaylistOverrides](./#playlist-overrides) 覆写最大玩家数 |
+| `-maxplayersplaylist` | 允许 [游戏参数覆写](./servers/dedicated-server/README#游戏参数覆写) 覆写最大玩家数 |
 | `-enablechathooks`    | 允许在聊天框中直接输入指令                                         |
 
 ### 游戏参数覆写
@@ -88,7 +88,7 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 
 ## 全局变量
 
-全局变量位于 `R2Northstar mods Northstar.CustomServers mod cfg autoexec_ns_server.cfg` 中.
+全局变量位于 `R2Northstar\mods\Northstar.CustomServers\mod\cfg\autoexec_ns_server.cfg` 中.
 
 它允许管理员更改服务器资料，例如TCP端口，名称，描述等.
 
@@ -106,10 +106,10 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 | `ns_should_return_to_lobby`                      | 服务器是否在对局结束后返回私人比赛大厅，若值设为`0`，则会在多人游戏地图池中轮换            | `1`                            | `0-1`                            |
 | `ns_private_match_only_host_can_change_settings` | 0 --> 玩家可以更改所有设置；1 --> 玩家仅能更改地图与模式；2 --> 玩家不能更改任何设置     | `0`                            | `0-2`                            |
 | `ns_private_match_countdown_length`              | 在私人比赛大厅开始游戏后，游戏开始的倒计时时长                                 | `15`                           | `int`                            |
-| `ns_private_match_last_mode`                     | 覆写私人比赛大厅所选择的的默认模式                                             | `tdm`                          | 所有的 [Gamemode](./#gamemodes)     |
-| `ns_private_match_last_map`                      | 覆写私人比赛大厅的默认选择地图                                             | `mp_forwardbase_kodai`         | 所有的 [Map](./#maps)               |
-| `ns_disallowed_weapons`                          | 武器黑名单                                                   |                                | 任何 [Weapons](./#weapons) 以半角逗号分隔 |
-| `ns_disallowed_weapon_primary_replacement`       | 替换武器黑名单中的武器为"   "                                                |                                | 一件 [Weapon](./#weapons)          |
+| `ns_private_match_last_mode`                     | 覆写私人比赛大厅所选择的的默认模式                                             | `tdm`                          | 所有的 [游戏模式](./servers/dedicated-server/README#游戏模式)     |
+| `ns_private_match_last_map`                      | 覆写私人比赛大厅的默认选择地图                                             | `mp_forwardbase_kodai`         | 所有的 [游戏地图](./servers/dedicated-server/README#游戏地图)               |
+| `ns_disallowed_weapons`                          | 武器黑名单                                                   |                                | 任何 [武器](./servers/dedicated-server/README#武器) 以半角逗号分隔 |
+| `ns_disallowed_weapon_primary_replacement`       | 替换武器黑名单中的武器为"   "                                                |                                | 一件 [武器](./servers/dedicated-server/README#武器)          |
 | `ns_should_log_unknown_clientcommands`           | 是否在控制台中显示未知的指令输入                                 | `1`                            | `0-1`                            |
 | `net_chan_limit_mode`                            | 0 --> 不限制占用网络通道超时的客户端；1 --> 踢出占用网络通道超时的客户端；2 --> 将占用网络通道时间超时的客户端信息显示在控制台中 | `2`                            | `0-2`                            |
 | `net_chan_limit_msec_per_sec`                    | net_chan_limit_mode 中的超时时间设定 (ms)                    | `30`                           | `int`                            |
@@ -120,9 +120,9 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 
 ## 游戏模式
 
-游戏模式可以通过 [`+mp_gamemode`](./#Startup_args-mpgamemode) 这一启动参数指定
+游戏模式可以通过 [`+mp_gamemode`](./servers/dedicated-server/README#启动项) 这一启动参数指定
 
-如果设置了 [`ns_should_return_to_lobby 0`](./#Convars-returntolobby) 这一条环境变量, 则[`ns_private_match_last_mode`](./#Convars-lastmode) 这一条环境变量也需要被正确设定
+如果设置了 [`ns_should_return_to_lobby 0`](./servers/dedicated-server/README#全局变量) 这一条环境变量, 则[`ns_private_match_last_mode`](./servers/dedicated-server/README#全局变量) 这一条环境变量也需要被正确设定
 
 ### 原版
 
@@ -215,11 +215,11 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 
 ## 游戏地图
 
-地图可以通过 [`ns_should_return_to_lobby 0`](./#Convars-returntolobby) 来设置自动轮换
+地图可以通过 [`ns_should_return_to_lobby 0`](./servers/dedicated-server/README#全局变量) 来设置自动轮换
 
-第一张地图可以通过 [`ns_private_match_last_map`](./#Convars-lastmap) 指定
+下一回合游戏地图可以通过 [`ns_private_match_last_map`](./servers/dedicated-server/README#全局变量) 指定
 
-不存在禁止某张图加入轮换池的方法（投票插件：“？”).
+若需自定义地图轮换池，则需借助第三方MOD
 
 ### 多人游戏
 
