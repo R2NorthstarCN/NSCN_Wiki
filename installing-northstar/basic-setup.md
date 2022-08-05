@@ -26,17 +26,17 @@
 尽管在运行游戏时您需要将`Origin`保持在后台运行，但是启动器默认并不能读取`Origin`中您设置的附加启动项，您可以将所需要的启动项添加至 `ns_startup_args.txt`, 该文件位于TTF2游戏的根目录中.
 
 例如:
-```markdown
+```
 -multiple -novid -high
 ```
 
-## Linux平台游玩
+## Linux平台
 
 Linux请参考 [这里](installing-northstar/playing-on-linux.md#如何在🐧Linux发行版上游玩NorthStarCN(TODO)).
 TODO.
 Awaiting Editing.
 
-## SteamDeck平台游玩
+## SteamDeck平台
 
 TODO.
 Awaiting Editing.

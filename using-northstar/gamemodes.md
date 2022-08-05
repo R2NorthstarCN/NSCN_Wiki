@@ -6,7 +6,7 @@
  * @Description:
  * @FilePath: \NorthStarCN_WIKI\Doc\aboutGamemode.md
 -->
-# 自带游戏模式简介
+# 游戏模式简介
 ## 混战
 ![](https://cdn.jsdelivr.net/gh/HK560/MyPicHub@master/res/pic/20211228140652.png)
 
