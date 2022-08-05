@@ -1,4 +1,6 @@
-# NorthStar 开发维护&贡献者：
+# 贡献者列表
+
+## NorthStar 开发维护&贡献者：
 - [BobTheBob](https://github.com/BobTheBob9)
 - [HappyDOGE](https://github.com/HappyDOGE)
 - [p0358](https://github.com/p0358)
@@ -28,7 +30,7 @@
 - [MindSwipe](https://github.com/MindSwipe)
 - [WtzLAS](https://github.com/WtzLAS)
   
-# NorthStarCN 开发维护&贡献者:
+## NorthStarCN 开发维护&贡献者:
 - [wolf109909](https://github.com/wolf109909)
 - [WtzLASR](https://github.com/WtzLAS)
 - [zxcPandora](https://github.com/zxcPandora)
