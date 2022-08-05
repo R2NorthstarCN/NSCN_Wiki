@@ -62,9 +62,13 @@
 
 点击您的网卡，查看路由器DHCP服务器为您分配的局域网IP
 
+![Task-manager](../../assets/task.png)
+
 此处该PC的IP地址为`192.168.31.131`
 
 回到路由器管理后台，点击添加端口转发规则
+
+![Port-forward](../../assets/port-fowarfing-panel.png)
 
 在默认配置下，您需要转发的端口如下
 
