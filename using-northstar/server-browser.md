@@ -1,6 +1,6 @@
 # 服务器浏览器
 
-![Server Browser](https://raw.githubusercontent.com/R2Northstar/NorthstarWiki/main/docs/images/serverbrowser.png)
+![Server Browser](../assets/serverbrowser.png)
 
 NorthStarCN在游戏中集成了一个服务器浏览器，用于自由选择服务器并加入
 

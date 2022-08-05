@@ -6,11 +6,11 @@
 ## 配置文件
 
 * `.\ns_startup_args_dedi.txt` 
-  包含服务器的 [启动项](./servers/dedicated-server/README#启动项)
-* `. R2Northstar\mods\Northstar.CustomServers\mod.json` 
-  保存着 [全局变量](./servers/dedicated-server/README#全局变量) 的默认参数
-* `. R2Northstar\mods\Northstar.CustomServers\mod\cfg\autoexec_ns_server.cfg` 
-  保存着 [全局变量](./servers/dedicated-server/README#全局变量) 的自定义参数，该文件在游戏加载时将覆盖上方的默认参数
+  包含服务器的 [启动项](servers/dedicated-server/README#启动项)
+* `.\R2Northstar\mods\Northstar.CustomServers\mod.json` 
+  保存着 [全局变量](servers/dedicated-server/README#全局变量) 的默认参数
+* `.\R2Northstar\mods\Northstar.CustomServers\mod\cfg\autoexec_ns_server.cfg` 
+  保存着 [全局变量](servers/dedicated-server/README#全局变量) 的自定义参数，该文件在游戏加载时将覆盖上方的默认参数
 
 
 
@@ -23,15 +23,15 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 
 | 启动项                         | 接受值                                                           | 描述                                                                                        |
 | -------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `+setplaylist`             | 参考 [游戏模式](./servers/dedicated-server/README#游戏模式) (应该与 `mp_gamemode` 相同,除非您想要私人比赛) | 设置服务器类型 (如果其不是 `private_match`, 那么请确保 `+map` 已正确应用且 **不是** `mp_lobby` 否则您可能无法在一下子发现您的服务器) |
-| `+setplaylistvaroverrides` | 参考 [游戏参数覆写](./servers/dedicated-server/README#游戏参数覆写)                 | 设置服务器的各种行为                                                                                |
+| `+setplaylist`             | 参考 [游戏模式](servers/dedicated-server/README#游戏模式) (应该与 `mp_gamemode` 相同,除非您想要私人比赛) | 设置服务器类型 (如果其不是 `private_match`, 那么请确保 `+map` 已正确应用且 **不是** `mp_lobby` 否则您可能无法在一下子发现您的服务器) |
+| `+setplaylistvaroverrides` | 参考 [游戏参数覆写](servers/dedicated-server/README#游戏参数覆写)                 | 设置服务器的各种行为                                                                                |
 | `-port`                    | `1-65535` 之间的整数值                                              | 设置服务器监听的UDP端口                                                                             |
-| `+mp_gamemode`             | 参考 [游戏模式](./servers/dedicated-server/README#游戏模式)                                  | 强制服务器载入某一模式                                                                               |
-| `+map`                     | 参考 [游戏地图](./servers/dedicated-server/README#游戏地图) (如不指定，则为 `mp_lobby`)                       | 强制服务器载入特定初始地图                                                                             |
+| `+mp_gamemode`             | 参考 [游戏模式](servers/dedicated-server/README#游戏模式)                                  | 强制服务器载入某一模式                                                                               |
+| `+map`                     | 参考 [游戏地图](servers/dedicated-server/README#游戏地图) (如不指定，则为 `mp_lobby`)                       | 强制服务器载入特定初始地图                                                                             |
 
 | 特殊项                  | 描述                                                    |
 | --------------------- | ----------------------------------------------------- |
-| `-maxplayersplaylist` | 允许 [游戏参数覆写](./servers/dedicated-server/README#游戏参数覆写) 覆写最大玩家数 |
+| `-maxplayersplaylist` | 允许 [游戏参数覆写](servers/dedicated-server/README#游戏参数覆写) 覆写最大玩家数 |
 | `-enablechathooks`    | 允许在聊天框中直接输入指令                                         |
 
 ### 游戏参数覆写
@@ -107,10 +107,10 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 | `ns_should_return_to_lobby`                      | 服务器是否在对局结束后返回私人比赛大厅，若值设为`0`，则会在多人游戏地图池中轮换            | `1`                            | `0-1`                            |
 | `ns_private_match_only_host_can_change_settings` | 0 --> 玩家可以更改所有设置；1 --> 玩家仅能更改地图与模式；2 --> 玩家不能更改任何设置     | `0`                            | `0-2`                            |
 | `ns_private_match_countdown_length`              | 在私人比赛大厅开始游戏后，游戏开始的倒计时时长                                 | `15`                           | `int`                            |
-| `ns_private_match_last_mode`                     | 覆写私人比赛大厅所选择的的默认模式                                             | `tdm`                          | 所有的 [游戏模式](./servers/dedicated-server/README#游戏模式)     |
-| `ns_private_match_last_map`                      | 覆写私人比赛大厅的默认选择地图                                             | `mp_forwardbase_kodai`         | 所有的 [游戏地图](./servers/dedicated-server/README#游戏地图)               |
-| `ns_disallowed_weapons`                          | 武器黑名单                                                   |                                | 任何 [武器](./servers/dedicated-server/README#武器) 以半角逗号分隔 |
-| `ns_disallowed_weapon_primary_replacement`       | 替换武器黑名单中的武器为"   "                                                |                                | 一件 [武器](./servers/dedicated-server/README#武器)          |
+| `ns_private_match_last_mode`                     | 覆写私人比赛大厅所选择的的默认模式                                             | `tdm`                          | 所有的 [游戏模式](servers/dedicated-server/README#游戏模式)     |
+| `ns_private_match_last_map`                      | 覆写私人比赛大厅的默认选择地图                                             | `mp_forwardbase_kodai`         | 所有的 [游戏地图](servers/dedicated-server/README#游戏地图)               |
+| `ns_disallowed_weapons`                          | 武器黑名单                                                   |                                | 任何 [武器](servers/dedicated-server/README#武器) 以半角逗号分隔 |
+| `ns_disallowed_weapon_primary_replacement`       | 替换武器黑名单中的武器为"   "                                                |                                | 一件 [武器](servers/dedicated-server/README#武器)          |
 | `ns_should_log_unknown_clientcommands`           | 是否在控制台中显示未知的指令输入                                 | `1`                            | `0-1`                            |
 | `net_chan_limit_mode`                            | 0 --> 不限制占用网络通道超时的客户端；1 --> 踢出占用网络通道超时的客户端；2 --> 将占用网络通道时间超时的客户端信息显示在控制台中 | `2`                            | `0-2`                            |
 | `net_chan_limit_msec_per_sec`                    | net_chan_limit_mode 中的超时时间设定 (ms)                    | `30`                           | `int`                            |
@@ -121,104 +121,99 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 
 ## 游戏模式
 
-游戏模式可以通过 [`+mp_gamemode`](./servers/dedicated-server/README#启动项) 这一启动参数指定
+游戏模式可以通过 [`+mp_gamemode`](servers/dedicated-server/README#启动项) 这一启动参数指定
 
-如果设置了 [`ns_should_return_to_lobby 0`](./servers/dedicated-server/README#全局变量) 这一条环境变量, 则[`ns_private_match_last_mode`](./servers/dedicated-server/README#全局变量) 这一条环境变量也需要被正确设定
+如果设置了 [`ns_should_return_to_lobby 0`](servers/dedicated-server/README#全局变量) 这一条环境变量, 则[`ns_private_match_last_mode`](servers/dedicated-server/README#全局变量) 这一条环境变量也需要被正确设定
 
 ### 原版
 
 | Playlist       | Title               |
 | -------------- | ------------------- |
-| private_match | 私人比赛                |
-| aitdm     | 消耗战             |
-| at         | 赏金猎人           |
-| coliseum       | 竞技场                 |
-| cp             | 强化据点                |
-| ctf            | 夺旗                  |
-| fd_easy   | 边境防御 (简单)     |
-| fd_normal | 边境防御 (普通)  |
-| fd_hard   | 边境防御 (困难)     |
-| fd_insane | 边境防御 (疯狂)   |
-| fd_master | 边境防御 (大师)   |
-| lf             | 烈火战场                |
-| lts            | Last Titan Standing |
-| mfd            | Marked For Death    |
-| ps             | 铁驭对铁驭               |
-| solo           | 单人战役            |
-| tdm            | 小规模战斗               |
-| ttdm           | 泰坦争斗                |
-
-### 原版 （特殊）
-
-| Playlist      | Title                     |
-| ------------- | ------------------------- |
-| alts          | Aegis Last Titan Standing |
-| attdm         | 神盾泰坦争斗                    |
-| ffa           | 自由混战              |
-| fra           | Free Agents               |
-| holopilot_lf | 大骗局                       |
-| rocket_lf    | 火箭竞技场              |
-| turbo_lts    | Turbo Last Titan Standing |
-| turbo_ttdm   | 涡轮泰坦争斗                    |
+| `private_match` | 私人比赛                |
+| `aitdm`     | 消耗战             |
+| `at`         | 赏金猎人           |
+| `coliseum`       | 竞技场                 |
+| `cp`             | 强化据点                |
+| `ctf`            | 夺旗                  |
+| `fd_easy`   | 边境防御 (简单)     |
+| `fd_normal` | 边境防御 (普通)  |
+| `fd_hard`   | 边境防御 (困难)     |
+| `fd_insane` | 边境防御 (疯狂)   |
+| `fd_master` | 边境防御 (大师)   |
+| `lf`             | 烈火战场                |
+| `lts`            | Last Titan Standing |
+| `mfd`            | Marked For Death    |
+| `ps`             | 铁驭对铁驭               |
+| `solo`           | 单人战役            |
+| `tdm`            | 小规模战斗               |
+| `ttdm`           | 泰坦争斗                |
+| `alts`          | Aegis Last Titan Standing |
+| `attdm`         | 神盾泰坦争斗                    |
+| `ffa`           | 自由混战              |
+| `fra`           | Free Agents               |
+| `holopilot_lf` | 大骗局                       |
+| `rocket_lf`    | 火箭竞技场              |
+| `turbo_lts`    | Turbo Last Titan Standing |
+| `turbo_ttdm`   | 涡轮泰坦争斗                    |
 
 ### MOD额外模式
 
 | Playlist  | Title              |
 | --------- | ------------------ |
-| chamber   | One in the Chamber |
-| ctf_comp | Competitive CTF    |
-| fastball  | Fastball           |
-| gg        | 军备竞赛               |
-| hidden    | 幽灵猎杀               |
-| hs        | 追迷藏                |
-| inf       | 感染                 |
-| kr        | 强化杀戮赛     |
-| sbox      | 沙盒                 |
-| sns       | 针锋相对  |
-| tffa      | 泰坦自由混战          |
-| tt        | Titan Tag          |
-| sp_coop | 多人合作单人战役 |
+| `chamber`   | One in the Chamber |
+| `ctf_comp` | Competitive CTF    |
+| `fastball`  | Fastball           |
+| `gg`        | 军备竞赛               |
+| `hidden`    | 幽灵猎杀               |
+| `hs`        | 追迷藏                |
+| `inf`       | 感染                 |
+| `kr`       | 强化杀戮赛     |
+| `sbox`      | 沙盒                 |
+| `sns`       | 针锋相对  |
+| `tffa`      | 泰坦自由混战          |
+| `tt`        | Titan Tag          |
+| `sp_coop` | 多人合作单人战役 |
 
 ## 武器
 
 | Weapon Code                  | Weapon name    |
 | ---------------------------- | -------------- |
-| mp_weapon_car              | CAR            |
-| mp_weapon_alternator_smg  | 转换者            |
-| mp_weapon_hemlok_smg      | 电能冲锋枪          |
-| mp_weapon_r97              | R-97           |
-| mp_weapon_hemlok           | 汗洛             |
-| mp_weapon_vinson           | 平行步枪           |
-| mp_weapon_g2               | G2             |
-| mp_weapon_rspn101          | R-201          |
-| mp_weapon_rspn101_og      | R-101          |
-| mp_weapon_esaw             | 专注轻机枪       |
-| mp_weapon_lstar            | L-STAR         |
-| mp_weapon_lmg              | 喷火轻机枪       |
-| mp_weapon_shotgun          | EVA-8 Auto     |
-| mp_weapon_mastiff          | 敖犬        |
-| mp_weapon_dmr              | DMR            |
-| mp_weapon_sniper           | 克莱伯            |
-| mp_weapon_doubletake       | 双重击    |
-| mp_weapon_pulse_lmg       | 冷战          |
-| mp_weapon_smr              | Sidewinder SMR |
-| mp_weapon_softball         | 软球       |
-| mp_weapon_epg              | EPG-1          |
-| mp_weapon_shotgun_pistol  | 莫桑比克           |
-| mp_weapon_wingman_n       | 菁英小帮手          |
-| mp_weapon_autopistol       | RE-45          |
-| mp_weapon_semipistol       | P2016          |
-| mp_weapon_wingman          | 小帮手            |
-| mp_weapon_mgl              | MGL            |
-| mp_weapon_arc_launcher    | Thunderbolt    |
-| mp_weapon_rocket_launcher | Archer         |
-| mp_weapon_defender         | 电能步枪           |
+| `mp_weapon_car`              | CAR            |
+| `mp_weapon_alternator_smg`  | 转换者            |
+| `mp_weapon_hemlok_smg`      | 电能冲锋枪          |
+| `mp_weapon_r97`              | R-97           |
+| `mp_weapon_hemlok`           | 汗洛             |
+| `mp_weapon_vinson`           | 平行步枪           |
+| `mp_weapon_g2`               | G2             |
+| `mp_weapon_rspn101`          | R-201          |
+| `mp_weapon_rspn101_og`      | R-101          |
+| `mp_weapon_esaw`             | 专注轻机枪       |
+| `mp_weapon_lstar`            | L-STAR         |
+| `mp_weapon_lmg`              | 喷火轻机枪       |
+| `mp_weapon_shotgun`          | EVA-8 Auto     |
+| `mp_weapon_mastiff`          | 敖犬        |
+| `mp_weapon_dmr`              | DMR            |
+| `mp_weapon_sniper`           | 克莱伯            |
+| `mp_weapon_doubletake`       | 双重击    |
+| `mp_weapon_pulse_lmg`       | 冷战          |
+| `mp_weapon_smr`              | Sidewinder SMR |
+| `mp_weapon_softball`         | 榴弹发射器      |
+| `mp_weapon_epg`              | EPG-1          |
+| `mp_weapon_shotgun_pistol`  | 莫桑比克           |
+| `mp_weapon_wingman_n`       | 菁英小帮手          |
+| `mp_weapon_autopistol`       | RE-45          |
+| `mp_weapon_semipistol`       | P2016          |
+| `mp_weapon_wingman`          | 小帮手            |
+| `mp_weapon_mgl`              | MGL            |
+| `mp_weapon_arc_launcher`    | 电球发射器    |
+| `mp_weapon_rocket_launcher` | 火箭筒         |
+| `mp_weapon_defender`         | 电能步枪           |
 
 ## 游戏地图
 
-地图可以通过 [`ns_should_return_to_lobby 0`](./servers/dedicated-server/README#全局变量) 来设置自动轮换
+地图可以通过 [`ns_should_return_to_lobby 0`](servers/dedicated-server/README#全局变量) 来设置自动轮换
 
-下一回合游戏地图可以通过 [`ns_private_match_last_map`](./servers/dedicated-server/README#全局变量) 指定
+下一回合游戏地图可以通过 [`ns_private_match_last_map`](servers/dedicated-server/README#全局变量) 指定
 
 若需自定义地图轮换池，则需借助第三方MOD
 
@@ -226,46 +221,46 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 
 | Map                     | Title  |
 | ----------------------- | ------ |
-| mp_angel_city         | 天使城    |
-| mp_black_water_canal | 黑水运河   |
-| mp_box                 | 沙盒   |
-| mp_coliseum            | 竞技场    |
-| mp_coliseum_column    | 梁柱     |
-| mp_colony02            | 殖民地    |
-| mp_complex3            | 综合设施   |
-| mp_crashsite3          | 坠机现场   |
-| mp_drydock             | 干坞     |
-| mp_eden                | 伊甸     |
-| mp_forwardbase_kodai  | 虎大前进基地 |
-| mp_glitch              | 异常     |
-| mp_grave               | 新兴城镇   |
-| mp_homestead           | 家园     |
-| mp_lf_deck            | 甲板     |
-| mp_lf_meadow          | 草原     |
-| mp_lf_stacks          | 堆积地    |
-| mp_lf_township        | 城镇     |
-| mp_lf_traffic         | 交通     |
-| mp_lf_uma             | UMA    |
-| mp_lobby               | 大厅     |
-| mp_relic02             | 遗迹     |
-| mp_rise                | 崛起     |
-| mp_thaw                | 系外行星   |
-| mp_wargames            | 战争游戏   |
+| `mp_angel_city`         | 天使城    |
+| `mp_black_water_canal` | 黑水运河   |
+| `mp_box`                 | 沙盒   |
+| `mp_coliseum`            | 竞技场    |
+| `mp_coliseum_column`    | 梁柱     |
+| `mp_colony02`            | 殖民地    |
+| `mp_complex3`            | 综合设施   |
+| `mp_crashsite3`          | 坠机现场   |
+| `mp_drydock`             | 干坞     |
+| `mp_eden`                | 伊甸     |
+| `mp_forwardbase_kodai`  | 虎大前进基地 |
+| `mp_glitch`              | 异常     |
+| `mp_grave`               | 新兴城镇   |
+| `mp_homestead`           | 家园     |
+| `mp_lf_deck`            | 甲板     |
+| `mp_lf_meadow`          | 草原     |
+| `mp_lf_stacks`          | 堆积地    |
+| `mp_lf_township`        | 城镇     |
+| `mp_lf_traffic`         | 交通     |
+| `mp_lf_uma`             | UMA    |
+| `mp_lobby`               | 大厅     |
+| `mp_relic02`             | 遗迹     |
+| `mp_rise`                | 崛起     |
+| `mp_thaw`                | 系外行星   |
+| `mp_wargames`            | 战争游戏   |
 
 ### 战役
 
 | Map                    | Title              |
 | ---------------------- | ------------------ |
-| sp_training           | 铁驭训练               |
-| sp_crashsite          | BT-7274            |
-| sp_sewers1            | 鲜血与钢铁              |
-| sp_boomtown_start    | 踏入虚空 - Part 1      |
-| sp_boomtown           | 踏入虚空 - Part 2      |
-| sp_boomtown_end      | 踏入虚空 - Part 2      |
-| sp_hub_timeshift     | 因果报应 - Part 1 / 3 |
-| sp_timeshift_spoke02 | 因果报应 - Part 2      |
-| sp_beacon             | 信号台 - Part 1 / 3  |
-| sp_beacon_spoke0     | 信号台 - Part 2       |
-| sp_tday               | 烈火审判               |
-| sp_s2s                | 圣柜                 |
-| sp_skyway_v1         | 折叠时空武器             |
+| `sp_training`           | 铁驭训练               |
+| `sp_crashsite`          | BT-7274            |
+| `sp_sewers1`            | 鲜血与钢铁              |
+| `sp_boomtown_start`    | 踏入虚空 - Part 1      |
+| `sp_boomtown`           | 踏入虚空 - Part 2      |
+| `sp_boomtown_end`      | 踏入虚空 - Part 2      |
+| `sp_hub_timeshift`     | 因果报应 - Part 1 / 3 |
+| `sp_timeshift_spoke02` | 因果报应 - Part 2      |
+| `sp_beacon`             | 信号台 - Part 1 / 3  |
+| `sp_beacon_spoke0`     | 信号台 - Part 2       |
+| `sp_tday`               | 烈火审判               |
+| `sp_s2s`                | 圣柜                 |
+| `sp_skyway_v1`         | 折叠时空武器             |

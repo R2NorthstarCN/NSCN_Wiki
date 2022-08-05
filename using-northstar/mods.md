@@ -1,6 +1,6 @@
 # 游戏MOD模组
 
-![NorthStarCN Mods](https://wiki.northstar.cool/assets/mods.png)
+![NorthStarCN Mods](../assets/mods.png)
 
 ## 预置MOD
 

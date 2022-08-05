@@ -21,13 +21,13 @@
 ### 修改服务端配置文件
 
 * `.\ns_startup_args.txt` 
-  包含游戏的 [启动项](./servers/dedicated-server/README#启动项)
-* `. R2Northstar\mods\Northstar.CustomServers\mod.json` 
-  保存着 [全局变量](./servers/dedicated-server/README#全局变量) 的默认参数
-* `. R2Northstar\mods\Northstar.CustomServers\mod\cfg\autoexec_ns_server.cfg` 
-  保存着 [全局变量](./servers/dedicated-server/README#全局变量) 的自定义参数，该文件在游戏加载时将覆盖上方[全局变量](./servers/dedicated-server/README#全局变量)的默认参数
+  包含游戏的 [启动项](servers/dedicated-server/README#启动项)
+* `.\R2Northstar\mods\Northstar.CustomServers\mod.json` 
+  保存着 [全局变量](servers/dedicated-server/README#全局变量) 的默认参数
+* `.\R2Northstar\mods\Northstar.CustomServers\mod\cfg\autoexec_ns_server.cfg` 
+  保存着 [全局变量](servers/dedicated-server/README#全局变量) 的自定义参数，该文件在游戏加载时将覆盖上方[全局变量](servers/dedicated-server/README#全局变量)的默认参数
 
-详细设置请参考[独立服务端](./servers/dedicated-server/README)
+详细设置请参考[独立服务端](servers/dedicated-server/README)
 
 ### 我是否拥有一个公网IP？
 
@@ -37,9 +37,13 @@
 
 在浏览器访问路由器管理后台，切换到上网模式设置页
 
+![My-ip](../../assets/my-ip.png)
+
 查看拨号信息中的分配到的IP地址
 
 浏览器访问[IPIP](http://myip.ipip.net/)，将拨号信息中的分配到的IP地址与浏览器中所显示的IP进行比对
+
+![IPIP](../../assets/ipip.png)
 
 若IP结果均一致，且非192.168.0.0/16，172.16.0.0/16，10.0.0.0/8等局域网私有IP，则您应该已经成功分配到了一个公网IP
 
@@ -66,11 +70,11 @@
 
 * `37015` (UDP)
 
-![UDP-PORT-FORWARDING](https://wiki.northstar.cool/assets/UDP-PORT-FORWARDING.png)
+![UDP-PORT-FORWARDING](../../assets/UDP-PORT-FORWARDING.png)
 
 * `8081` (TCP)
 
-![TCP-PORT-FORWARDING](https://wiki.northstar.cool/assets/TCP-PORT-FORWARDING.png)
+![TCP-PORT-FORWARDING](../../assets/TCP-PORT-FORWARDING.png)
 
 IP地址填写PC在局域网中分配到的IP地址，此处为`192.168.31.131`
 
@@ -101,9 +105,9 @@ IP地址填写PC在局域网中分配到的IP地址，此处为`192.168.31.131`
 
 若房间长时间未出现在浏览器中，您可以先在PC上打开命令提示符(CMD)，分别输入`netstat -ano | findstr "37015"`和`netstat -ano | findstr "8081"`来查看进程是否在本机上正确监听这两个端口
 
-![37015](https://wiki.northstar.cool/assets/37015.png)
+![37015](../../assets/37015.png)
 
-![8081](https://wiki.northstar.cool/assets/8081.png)
+![8081](../../assets/8081.png)
 
 若输入查询指令后并无结果返回，则应首先检查您是否已经关闭防火墙或是否已经添加防火墙相对应的允许规则
 
@@ -113,11 +117,11 @@ IP地址填写PC在局域网中分配到的IP地址，此处为`192.168.31.131`
 
 此处我们使用[IPVoid](https://www.ipvoid.com/port-scan/)来检查您的TCP端口是否可以访问(上文已经提到，默认为 `8081`)
 
-![SCAN-8081](https://wiki.northstar.cool/assets/SCAN-8081.png)
+![SCAN-8081](../../assets/SCAN-8081.png)
 
 然后使用[IPVoid-UDP](https://www.ipvoid.com/udp-port-scan/)来检查您的UDP端口是否可以访问(上文已经提到，默认为 `37015`)
 
-![SCAN-37015](https://wiki.northstar.cool/assets/SCAN-37015.png)
+![SCAN-37015](../../assets/SCAN-37015.png)
 
 在确认所有端口均可访问，配置文件设置正确后，您就可以开启游戏，并等待其他玩家进入您的房间了
 

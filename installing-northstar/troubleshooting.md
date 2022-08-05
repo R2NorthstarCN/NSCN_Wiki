@@ -1,4 +1,4 @@
-# 故障排除
+# NorthStarCN游戏故障排除
 
 
 Generally try to first launch the vanilla game (i.e. not Northstar) if you encounter any issue and see if it also occurs there as well. Some problems can occur when the vanilla game was never launched before using Northstar.

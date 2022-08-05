@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](assets/logo_1k.png)
+![logo](../assets/logo_1k.png)
 
 # NorthStarCN <small>1.9.2</small>
 
@@ -13,5 +13,5 @@
 
 <!-- 背景图片 -->
 
-![](assets/banner.jpg)
+![](../assets/banner.jpg)
 

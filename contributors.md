@@ -1,4 +1,4 @@
-# NorthStar 开发者：
+# NorthStar 开发维护&贡献者：
 - [BobTheBob](https://github.com/BobTheBob9)
 - [HappyDOGE](https://github.com/HappyDOGE)
 - [p0358](https://github.com/p0358)

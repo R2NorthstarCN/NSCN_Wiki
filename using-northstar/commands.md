@@ -4,7 +4,7 @@
 
 在游戏中, 按下键盘上 `` ` ``键，该键位于 `TAB` 上方，数字键`1`左侧，`ESC`下方
 
-若您在使用部分小语种输入法时按下`` ` ``键无法呼出控制台，请将输入法切换至ENG(英语)或者中文(拼音)
+若您在使用部分小语种输入法时按下`` ` ``键无法呼出控制台，请将输入法切换至`ENG(英语)`或者`中文(拼音)`
 
 
 ### 更换控制台呼出按键
@@ -49,21 +49,23 @@ bind "F4" "toggleconsole"
 
 需要先在控制台执行 `sv_cheats 1` ，然后才能使用以下指令
 
-指令|作用
-
-`thirdperson`|切换至第三人称模式
-`firstperson`|切换至第一人称模式
+| 命令                                    | 描述                                                           |
+| ------------------------------------------- | --------------------------------------------------------------------- |
+|`thirdperson`|切换至第三人称模式|
+|`firstperson`|切换至第一人称模式|
 
 > 以下部分指令仅在服务端也启用`sv_cheats 1`时才会生效，若您使用自己的电脑在游戏中开启了私人比赛房间，该房间服务端是在您电脑上本地运行的，在控制台输入`sv_cheats 1`相当于客户端和服务端均启用了作弊，所以指令可以生效，若您连接到一个没有启用作弊的远程服务器，即使在本地启用`sv_cheats 1`，以下指令也不会生效
--|-
-`script DevSpawnTitan()`|在您的位置上生成您在选择页面所装备的泰坦
-`script SetGameEndTime(1200.0)`|将比赛剩余时间设置为1200秒
-`ent_create npc_soldier`|在准星处生成NPC步兵
-`ent_create npc_stalker`|在准星处生成NPC幽灵战士
-`ent_create npc_spectre`|在准星处生成NPC潜行者
-`ent_create npc_titan`|在准星处生成NPC泰坦
-`ent_create npc_marvin`|在准星处生成NPC马文
-`ent_fire !picker setteam 2`|将准星处实体所属阵营设置为IMC
+
+| 命令                                    | 描述                                                           |
+| ------------------------------------------- | --------------------------------------------------------------------- |
+|`script DevSpawnTitan()`|在您的位置上生成您在选择页面所装备的泰坦|
+|`script SetGameEndTime(1200.0)`|将比赛剩余时间设置为1200秒|
+|`ent_create npc_soldier`|在准星处生成NPC步兵|
+|`ent_create npc_stalker`|在准星处生成NPC幽灵战士|
+|`ent_create npc_spectre`|在准星处生成NPC潜行者|
+|`ent_create npc_titan`|在准星处生成NPC泰坦|
+|`ent_create npc_marvin`|在准星处生成NPC马文|
+|`ent_fire !picker setteam 2`|将准星处实体所属阵营设置为IMC|
 
 `1`为测试阵营，对IMC和MIL均中立，`2`为IMC，`3`为MIL
 
