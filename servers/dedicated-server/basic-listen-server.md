@@ -4,7 +4,7 @@
 
 如果您想使用您的电脑在游戏中创建私人比赛房间(下文简称房间)并使其在服务器浏览器中可见，您需要一个公网IP(即Pubilc IP)
 
-在IPv4资源已经枯竭的当下，所有网络供应商(ISP)都会有倾向地减少向家庭/办公宽带用户提供公网IP资源，转而使用NAT(Network address translation，网络地址转换)，这是一个创建网络端口与IP地址映射关系的网络技术(RFC 1918，RFC 2663)，利用该项技术，网络供应商就可以在节省IPv4地址资源的同时向用户提供基本网络服务，但这也会导致用户无法被其他网络终端主动访问，这催生出了STUN(RFC 3489，RFC 5389)等UDP打洞/穿透技术和内网穿透等工具(FRP，NPS)，但是NorthStar在开发之初就未考虑过嵌套网络的情况，**这导致了上述穿透技术皆因协议问题无法使用**
+在IPv4资源已经枯竭的当下，所有网络供应商(ISP)都会有倾向地减少向家庭/办公宽带用户提供公网IP资源，转而使用NAT(Network address translation，网络地址转换)，这是一个创建网络端口与IP地址映射关系的网络技术([RFC 1918](https://www.rfc-editor.org/rfc/rfc1918.html)，[RFC 2663](https://www.rfc-editor.org/rfc/rfc2663.html))，利用该项技术，网络供应商就可以在节省IPv4地址资源的同时向用户提供基本网络服务，但这也会导致用户无法被其他网络终端主动访问，这催生出了STUN([RFC 3489](https://www.rfc-editor.org/rfc/rfc3489.html)，[RFC 5389](https://www.rfc-editor.org/rfc/rfc5389.html))等UDP打洞/穿透技术和内网穿透等工具([FRP](https://github.com/fatedier/frp)，[NPS](https://github.com/ehang-io/nps))，但是NorthStar在开发之初就未考虑过嵌套网络的情况，**这导致了上述穿透技术皆因协议问题无法使用**
 
 上述情况与国内外IPv4资源保有量有关，根据AS域统计数据显示，美国持有IPv4地址最多，每个网民平均可分配近6个地址，而中国、巴西、墨西哥等发展中国家网民人均仅有不到半个IPv4地址，北美与欧洲充足的网络资源导致这些地区的开发者在设计程序时几乎没有考虑过高嵌套网络环境的情况，同时，上述情况导致了国内三大运营商对家庭/办公宽带用户所分配的公网IP资源进一步缩减
 
@@ -45,7 +45,7 @@
 
 ![IPIP](../../assets/ipip.png)
 
-若IP结果均一致，且非192.168.0.0/16，172.16.0.0/16，10.0.0.0/8或100.64.0.0/10(运营商NAT IP,RFC6598)等局域网私有IP，则您应该已经成功分配到了一个公网IP
+若IP结果均一致，且非`192.168.0.0/16`，`172.16.0.0/16`，`10.0.0.0/8`或`100.64.0.0/10`(运营商NAT IP,[RFC 6598](https://www.rfc-editor.org/rfc/rfc6598.html))等局域网私有IP，则您应该已经成功分配到了一个公网IP
 
 
 ### 端口转发
@@ -141,7 +141,8 @@ sv_cheats 0      #更改完成后关闭作弊
 
 您可以将 `mp_forwardbase_kodai` 与 `ctf` 替换为您想更改为的地图与模式 
 
-您可以在控制台输入`ns_private_match_only_host_can_change_settings 2`，之后只有房主才有权限更改房间参数
+在控制台输入`ns_private_match_only_host_can_change_settings` 设置为 `2`，之后只有房主才有权限更改房间参数
 
-您可以将 `ns_private_match_countdown_length` 设置为 `1` 用来跳过开始游戏前的倒计时
-您可以将 `ns_private_match_only_host_can_start` 设置为 `1` ，只有只有房主才有权限开始游戏
+将 `ns_private_match_countdown_length` 设置为 `1` 用来跳过开始游戏前的倒计时
+
+将 `ns_private_match_only_host_can_start` 设置为 `1` ，之后只有房主才有权限开始游戏
