@@ -48,35 +48,35 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 | PlaylistOverrides                            | 接受值   | 默认值 | 描述                                                                                                 |
 | -------------------------------------------- | ----- | --- | -------------------------------------------------------------------------------------------------- |
 | `max_players`                                | `int` |     | 设置对局内最大玩家数量                                   |
-| `custom_air_accel_pilot`                     | `int` |     | 设置空中加速数值                                                                                                   |
-| `pilot_health_multiplier`                    | `int` |     | 设置玩家HP为默认HP的多少倍                                                                                                  |
+| `custom_air_accel_pilot`                     | `int` | `500` | 设置空中加速数值                                                                                                   |
+| `pilot_health_multiplier`                    | `int` |     | 设置玩家HP相较于默认HP的倍数                                                                                                  |
 | `run_epilogue`                               | `0-1` | `1` | 是否启用撤离                                                                                            |
 | `respawn_delay`                              | `int` |     | 设置玩家复活所需等待时间                                                                                               |
 | `boosts_enabled`                             | `0-1` | `0` | 是否禁用铁驭强化道具 |
 | `earn_meter_pilot_overdrive`                 | `0-2` |     |                                                                                                    |
-| `earn_meter_pilot_multiplier`                | `int` |     |                                                                                                    |
-| `earn_meter_titan_multiplier`                |       |     |                                                                                                    |
+| `earn_meter_pilot_multiplier`                | `int` |     | 铁驭在游戏内获得奖励点数的倍数(即左下角呼叫泰坦或战术技能的充能条进度)                                                                                                   |
+| `earn_meter_titan_multiplier`                | `int` |     | 泰坦在游戏内获得奖励点数的倍数(即左下角核心进度条与F2战术技能)                                                                                                   |
 | `aegis_upgrades`                             | `0-1` | `0` | 是否启用泰坦神盾升级                                                                        |
 | `infinite_doomed_state`                      | `0-1` |     |                                                                                                    |
-| `titan_shield_regen`                         | `0-1` | `0` | 泰坦降落时是否启用能量护罩                                                                                          |
-| `scorelimit`                                 |       |     |                                                                                                    |
+| `titan_shield_regen`                         | `0-1` | `0` | 是否启用泰坦能量防护罩恢复                                                                                          |
+| `scorelimit`                                 |       |     | 对局分数上限                                                                                                   |
 | `roundscorelimit`                            |       |     |                                                                                                    |
-| `timelimit`                                  |       |     |                                                                                                    |
+| `timelimit`                                  |       |     |                                                                                                   |
 | `oob_timer_enabled`                          | `0-1` |     | 是否限制玩家出界行为                                                                                             |
 | `roundtimelimit`                             |       |     | 回合时间                                                                                                   |
-| `classic_rodeo`                              | `0-1` |     | 是否启用第一人称训牛术视角                                                                                                   |
+| `classic_rodeo`                              | `0-1` |     | 是否启用经典训牛术(即拔出电池后不离机)                                                                                                 |
 | `classic_mp`                                 | `0-1` | `1` | 是否启用入场运输船动画                                                                                            |
-| `fp_embark_enabled`                          |       |     | 是否启用第一人称处决和进入泰坦动画                                                                                          |
+| `fp_embark_enabled`                          |       |     | 是否启用第一人称训牛术和进入泰坦动画                                                                                          |
 | `promode_enable`                             | `0-1` | `0` | Dev / Debug                                                                                                   |
 | `riff_floorislava`                           | `0-1` | `0` | 是否在地面生成电子烟雾                                                                                         |
-| `featured_mode_all_holopilot`                | `0-1` | `0` |                                                                                                    |
-| `featured_mode_all_grapple`                  | `0-1` | `0` |                                                                                                    |
-| `featured_mode_all_phase`                    | `0-1` | `0` |                                                                                                    |
-| `featured_mode_all_ticks`                    | `0-1` | `0` |                                                                                                    |
+| `featured_mode_all_holopilot`                | `0-1` | `0` | 是否将所有玩家战术技能替换为幻影                                                                                                   |
+| `featured_mode_all_grapple`                  | `0-1` | `0` | 是否将所有玩家战术技能替换为钩爪                                                                                                   |
+| `featured_mode_all_phase`                    | `0-1` | `0` | 是否将所有玩家战术技能替换为相位移动                                                                                                   |
+| `featured_mode_all_ticks`                    | `0-1` | `0` | 是否将所有玩家战术技能替换为Tick炸弹                                                                                                   |
 | `featured_mode_tactikill`                    | `0-1` | `0` |                                                                                                    |
-| `featured_mode_amped_tacticals`              | `0-1` | `0` |                                                                                                    |
-| `featured_mode_rocket_arena`                 | `0-1` | `0` |                                                                                                    |
-| `featured_mode_shotguns_snipers`             | `0-1` | `0` |                                                                                                    |
+| `featured_mode_amped_tacticals`              | `0-1` | `0` | 是否将所有玩家战术技能冷却数+1                                                                                                   |
+| `featured_mode_rocket_arena`                 | `0-1` | `0` | 是否在游戏内启用火箭竞技场游戏规则                                                                                                   |
+| `featured_mode_shotguns_snipers`             | `0-1` | `0` | 是否在游戏内启用Armed and Dangerous游戏规则，即仅允许使用霰弹与狙击枪                                                                                                   |
 | `iron_rules`                                 | `0-1` | `0` | 是否禁止泰坦弹射和玩家离开泰坦                                                                                            |
 | `riff_player_bleedout`                       | `0-1` |     | Dev / Debug                                                                                                   |
 | `player_bleedout_forceHolster`               | `0-1` |     | Dev / Debug                                                                                                   |
@@ -91,7 +91,7 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 
 全局变量位于 `R2Northstar\mods\Northstar.CustomServers\mod\cfg\autoexec_ns_server.cfg` 中.
 
-它允许管理员更改服务器资料，例如TCP端口，名称，描述等.
+您可在这里更改服务器名称，描述与TCP验证端口等.
 
 | 名称                                               | 描述                                                      | 默认值                            | 接受值                              |
 | ------------------------------------------------ | ------------------------------------------------------- | ------------------------------ | -------------------------------- |
