@@ -141,7 +141,7 @@ sv_cheats 0      #更改完成后关闭作弊
 
 您可以将 `mp_forwardbase_kodai` 与 `ctf` 替换为您想更改为的地图与模式 
 
-在控制台输入`ns_private_match_only_host_can_change_settings` 设置为 `2`，之后只有房主才有权限更改房间参数
+将`ns_private_match_only_host_can_change_settings` 设置为 `2`，之后只有房主才有权限更改房间参数
 
 将 `ns_private_match_countdown_length` 设置为 `1` 用来跳过开始游戏前的倒计时
 
