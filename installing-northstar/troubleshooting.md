@@ -1,13 +1,25 @@
 # NorthStarCN游戏故障排除
 
+!> 在首次启动NorthStarCN前，请先至少运行一次原版游戏
 
-Generally try to first launch the vanilla game (i.e. not Northstar) if you encounter any issue and see if it also occurs there as well. Some problems can occur when the vanilla game was never launched before using Northstar.
+## 找不到 `Tier0.dll` 
 
-A lot of problems around the game failing to communicate with Origin can also be prevented by launching Origin before Northstar should you encounter any issues in that regard.
+![Failed to load the tier0.dll](../assets/tier0.dll-failure.png)
 
-Also note that some solutions described below can also apply to the base game, like issues caused by [10th+ gen Intel CPUs](#intel).
+该错误通常是因为您没有把`NorthstarLauncher.exe`及其资源文件放置在正确的目录导致的，请将启动器及其资源文件放置在`Titanfall 2`游戏根目录下
 
-## LSX Authentication Failed <a href="#lsx" id="lsx"></a>
+* Steam安装默认目录: `%ProgramFiles(x86)%\Steam\steamapps\common\Titanfall2\` 或 `..\SteamLibrary\steamapps\common\Titanfall2\`
+* Origin安装默认目录: `..\Origin Games\Titanfall2\`
+
+**如果这个问题在您确认`NorthstarLauncher.exe`及其资源文件放置在正确目录后仍然出现:** 这意味着您的游戏资源文件出现了**缺失或损坏**
+
+* 打开游戏根目录，找到\bin\x64_retail\该文件夹，确认您是否有以下所有文件
+
+![根目录](../assets/dlls-list.png)
+
+若出现缺失，请您在Steam/Origin修复游戏
+
+## LSX Authentication Failed
 
 ![LSX Authentication Challenge failed](https://user-images.githubusercontent.com/97235072/148391447-300e1b47-6148-43f7-8854-b0882e150d12.png)
 
@@ -19,20 +31,7 @@ If the usual workaround of restarting Origin/rebooting or running the vanilla ga
 * Sign out and exit Origin, then start Northstar. It will prompt you for a login, _hopefully_ fixing it if nothing else worked
 * Start normal Titanfall 2 and then Northstar (_ONLY WORKS SOMETIMES_)
 
-## Tier0.dll Not found <a href="#tier0" id="tier0"></a>
 
-![Failed to load the tier0.dll](../images/northstar-launcher-error-wrong-location.png)
-
-This error is usually caused by running the `NorthstarLauncher.exe` in the wrong location, such as extracting the zip it came with directly in your Downloads folder and running it there.
-
-* Default Steam Location: `%ProgramFiles(x86)%\Steam\steamapps\common\Titanfall2\`
-* Default Origin Location: `%ProgramFiles(x86)%\Origin Games\Titanfall2\`
-
-**If it still appears after trying the fix above:** It's possible that you may have **corrupted or missing** game files
-
-* First check \bin\x64\_retail\ and check if you have these files
-
-![bin folder](../images/bin-folder.png)
 
 * If you dont have them verify your game on steam/origin/ea
 

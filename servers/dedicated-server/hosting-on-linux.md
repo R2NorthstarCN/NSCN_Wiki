@@ -6,6 +6,8 @@
 
 ### Docker
 
+[![构建状态](https://northstarcn.coding.net/badges/northstarcn/job/1473182/master/build.svg)](https://northstarcn.coding.net/p/northstarcn/ci/job)
+
 使用Docker前，你需要在Linux系统中先行下载好精简的TTF2 NorthStarCN服务端
 
 ```markdown
