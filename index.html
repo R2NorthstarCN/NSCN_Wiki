@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>NorthStarCN Wiki</title>
+    <title>NorthStarCN Wiki文档</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="description" content="Description">
+    <meta name="keywords" content="Wiki,NorthStarCN,NorthStarCN Wiki,R2NorthStarCN,Titanfall 2,Titanfall,Modify,Chinese,Respawn,Entertainment,泰坦陨落,泰坦陨落2,泰坦天降,泰坦天降2,北极星,北极星CN,NS,NSCN,文档">
+    <meta name="description" content="NorthStarCN 官方Wiki百科网站">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- 设置浏览器图标 -->
@@ -22,36 +23,45 @@
         window.$docsify = {
             // 项目名称
             name: 'NorthStarCN Wiki',
-            // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
+            // 侧边栏的NorthStarCN Logo图标
+            logo: '/assets/wide-banner.png',
+            // 仓库地址，点击右上角的Github章鱼猫图标会跳转到此地址
             repo: 'https://github.com/R2NorthstarCN/',
-
+            // 启用侧边栏，作为Wiki的目录
             loadSidebar: true,
-
-            loadSidebar: 'sidebar.md',
-            // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
+            // 侧边栏文件，默认加载的是项目根目录下的_sidebar.md文件
+            loadSidebar: '../../sidebar.md',
+            // 不启用顶部导航栏，没啥用
             loadNavbar: false,
-
+            // 启用封面
             coverpage: true,
             // 最大支持渲染的标题层级
             maxLevel: 5,
-            // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
+            // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（文档建议配置为2-4）
             subMaxLevel: 4,
-            // 小屏设备下合并导航栏到侧边栏
+            // 移动小屏设备(手机等)下合并导航栏到侧边栏
             mergeNavbar: true,
-            // Custom file name
-            coverpage: 'coverpage.md',
+            // 封面文件
+            coverpage: '../../coverpage.md',
+            // 404页面
+            notFoundPage: '../../404.md',
         }
+    </script>
+
+    <!-- 离线功能支持 -->
+    <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
     </script>
 
   
 
-    <!-- docsify的js依赖 -->
+    <!-- docsify所需的js依赖 -->
     <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/docsify.min.js"></script>
-    <!-- emoji表情支持 -->
+    <!-- emoji表情支持js -->
     <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/plugins/emoji.min.js"></script>
-    <!-- 图片放大缩小支持 -->
-    <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/plugins/zoom-image.min.js"></script>
-    <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
+    <!--在所有的代码块上添加一个简单的Click to copy按钮，方便大伙从文档中复制代码-->
     <script src="//cdn.bootcdn.net/ajax/libs/docsify-copy-code/2.1.1/docsify-copy-code.min.js"></script>
 </body>
 
