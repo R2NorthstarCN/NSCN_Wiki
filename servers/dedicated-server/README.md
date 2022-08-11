@@ -17,17 +17,17 @@
 
 ## 启动项
 
-启动参数可以在 `ns_startup_args_dedi.txt` 中添加
+独立服务端的启动参数可以在 `ns_startup_args_dedi.txt` 中添加
 
 e.g: `+setplaylist ps +mp_gamemode ps`
 
 | 启动项                         | 接受值                                                           | 描述                                                                                        |
 | -------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `+setplaylist`             | 参考 [游戏模式](servers/dedicated-server/README#游戏模式) (应该与 `mp_gamemode` 相同,除非您想要私人比赛) | 设置服务器类型 (如果其不是 `private_match`, 那么请确保 `+map` 已正确应用且 **不是** `mp_lobby` 否则您可能无法在一下子发现您的服务器) |
-| `+setplaylistvaroverrides` | 参考 [游戏参数覆写](servers/dedicated-server/README#游戏参数覆写)                 | 设置服务器的各种行为                                                                                |
+| `+setplaylist`             | 参考 [游戏模式](servers/dedicated-server/README#游戏模式) (该值应保持与 `mp_gamemode` 所设置的值相同,除非您设置的模式为私人比赛`private_match`) | 设置服务器的游戏模式 (如果您设置的值并非私人比赛`private_match`, 那么请务必添加 `+map` 并设置正确的游戏地图，若未设置 `+map`，服务器默认加载的地图为私人比赛大厅 `mp_lobby`(这是完全错误的搭配！！！) ，错误的模式与地图搭配会导致您的服务器**无法**在服务器浏览器上注册并对所有玩家可见) |
+| `+setplaylistvaroverrides` | 参考 [游戏参数覆写](servers/dedicated-server/README#游戏参数覆写)                 | 设置服务器的游戏对局参数                                                                                |
 | `-port`                    | `1-65535` 之间的整数值                                              | 设置服务器监听的UDP端口                                                                             |
-| `+mp_gamemode`             | 参考 [游戏模式](servers/dedicated-server/README#游戏模式)                                  | 强制服务器载入某一模式                                                                               |
-| `+map`                     | 参考 [游戏地图](servers/dedicated-server/README#游戏地图) (如不指定，则为 `mp_lobby`)                       | 强制服务器载入特定初始地图                                                                             |
+| `+mp_gamemode`             | 参考 [游戏模式](servers/dedicated-server/README#游戏模式)                                  | 设置服务器载入某一游戏模式                                                                               |
+| `+map`                     | 参考 [游戏地图](servers/dedicated-server/README#游戏地图) (如不指定，则为 `mp_lobby`)                       | 设置服务器载入某一游戏地图                                                                             |
 
 | 特殊项                  | 描述                                                    |
 | --------------------- | ----------------------------------------------------- |
@@ -46,7 +46,7 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 +setplaylistvaroverrides "run_epilogue 0 featured_mode_amped_tacticals 1 max_players 20 aegis_upgrades 1"
 ```
 
-| PlaylistOverrides                            | 接受值   | 默认值 | 描述                                                                                                 |
+| 覆写项                            | 接受值   | 默认值 | 描述                                                                                                 |
 | -------------------------------------------- | ----- | --- | -------------------------------------------------------------------------------------------------- |
 | `max_players`                                | `int` |     | 设置对局内最大玩家数量                                   |
 | `custom_air_accel_pilot`                     | `int` | `500` | 设置空中加速数值                                                                                                   |
