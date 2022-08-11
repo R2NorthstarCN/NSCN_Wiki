@@ -12,7 +12,7 @@
     <!-- 设置浏览器图标 -->
     <link rel="icon" href="/favicon.png" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-    <!-- 默认主题 -->
+    <!-- 默认主题，使用bootcdn，优化国内加载速度 -->
     <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/themes/vue.css">
 </head>
 
@@ -22,7 +22,7 @@
     <script>
         window.$docsify = {
             // 项目名称
-            name: 'NorthStarCN Wiki',
+            name: 'NorthStarCN Wiki文档',
             // 侧边栏的NorthStarCN Logo图标
             logo: '/assets/wide-banner.png',
             // 仓库地址，点击右上角的Github章鱼猫图标会跳转到此地址
@@ -45,6 +45,10 @@
             coverpage: '../../coverpage.md',
             // 404页面
             notFoundPage: '../../404.md',
+            // 启用底部信息
+            loadFooter: true,
+            // 加载footer.md
+            loadFooter: '../../footer.md',
         }
     </script>
 
@@ -61,8 +65,14 @@
     <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/docsify.min.js"></script>
     <!-- emoji表情支持js -->
     <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/plugins/emoji.min.js"></script>
+    <!-- 分页导航插件 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
     <!--在所有的代码块上添加一个简单的Click to copy按钮，方便大伙从文档中复制代码-->
     <script src="//cdn.bootcdn.net/ajax/libs/docsify-copy-code/2.1.1/docsify-copy-code.min.js"></script>
+    <!-- 离线模式js -->
+    <script src="//wiki.northstar.cool/sw.js"></script>
+    <!-- 底部信息插件 -->
+    <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
 </body>
 
 </html>

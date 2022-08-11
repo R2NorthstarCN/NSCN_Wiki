@@ -4,14 +4,14 @@
 
 # NorthStarCN <small>1.9.2</small>
 
-> 一个开放式的TTF2 MOD与自定义服务器框架
+> 一个开放式的TitanFall 2 MOD与自定义服务器框架
 
 
 [加入我们的KOOK服务器](https://kook.top/qetaS2)
-[开始阅读](#什么是NorthStarCN)
+[开始阅读](README.md#什么是NorthStarCN)
 
 
 <!-- 背景图片 -->
 
-![](../assets/banner.jpg)
+![](../assets/background.jpg)
 
