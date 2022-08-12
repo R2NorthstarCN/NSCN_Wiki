@@ -6,7 +6,7 @@
 
 ## Docker
 
-[![构建状态](https://northstarcn.coding.net/badges/northstarcn/job/1473182/master/build.svg)](https://northstarcn.coding.net/public-artifacts/northstarcn/northstarcn-dedi-docker/nscn-docker/version/16728669/overview)
+[![构建状态](https://northstarcn.coding.net/badges/northstarcn/job/1473182/master/build.svg)](https://northstarcn.coding.net/public-artifacts/northstarcn/northstarcn-dedi-docker/nscn-docker/version/16818666/overview)
 
 在SSH终端输入以下指令即可Pull最新版本NorthStarCN Docker服务端运行镜像
 

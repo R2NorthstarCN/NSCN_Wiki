@@ -12,8 +12,8 @@
     <!-- 设置浏览器图标 -->
     <link rel="icon" href="/favicon.png" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-    <!-- 默认主题，使用bootcdn，优化国内加载速度 -->
-    <link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/themes/vue.css">
+    <!-- 默认主题 -->
+    <link rel="stylesheet" href="./dependence/vue.css">
 </head>
 
 <body>
@@ -52,27 +52,18 @@
         }
     </script>
 
-    <!-- 离线功能支持 -->
-    <script>
-    if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('sw.js')
-    }
-    </script>
-
   
 
     <!-- docsify所需的js依赖 -->
-    <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/docsify.min.js"></script>
+    <script src="./dependence/docsify.min.js"></script>
     <!-- emoji表情支持js -->
-    <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/plugins/emoji.min.js"></script>
+    <script src="./dependence/emoji.min.js"></script>
     <!-- 分页导航插件 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-    <!--在所有的代码块上添加一个简单的Click to copy按钮，方便大伙从文档中复制代码-->
-    <script src="//cdn.bootcdn.net/ajax/libs/docsify-copy-code/2.1.1/docsify-copy-code.min.js"></script>
-    <!-- 离线模式js -->
-    <script src="//wiki.northstar.cool/sw.js"></script>
+    <script src="./dependence/docsify-pagination.min.js"></script>
+    <!--在所有的代码块上添加一个简单的Copy to clipboard按钮，方便大伙从文档中复制代码-->
+    <script src="./dependence/docsify-copy-code.min.js"></script>
     <!-- 底部信息插件 -->
-    <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
+    <script src="./dependence/docsify-footer.min.js"></script>
 </body>
 
 </html>
