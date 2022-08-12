@@ -1,21 +1,38 @@
 # 在Linux上搭建独立服务器
-> **this page is on editing phase at present**
-> **此页尚未完成编辑**
 
-> 在Linux发行版环境中搭建独立服务器目前可用途径只有使用[wine](https://www.winehq.org/)来运行服务端，在这一基础上我们也可以使用Docker来构建镜像，预置运行环境，实现即开即用以及多实例与集群管理。
+!> **此页尚未完成编辑**
 
-### Docker
+> 在Linux环境中搭建独立服务器目前可用途径只有使用[Wine](https://www.winehq.org/)来进行，在这一基础上我们也可以使用Docker来构建镜像，预置运行环境，实现即开即用以及多实例与集群管理。
+
+## Docker
 
 [![构建状态](https://northstarcn.coding.net/badges/northstarcn/job/1473182/master/build.svg)](https://northstarcn.coding.net/public-artifacts/northstarcn/northstarcn-dedi-docker/nscn-docker/version/16728669/overview)
 
+在SSH终端输入以下指令即可Pull最新版本NorthStarCN Docker服务端运行镜像
+
+```
+docker pull northstarcn-docker.pkg.coding.net/northstarcn/northstarcn-dedi-docker/nscn-docker:1.9.2
+```
+
+### 优势
+
+- 比在Windows GUI环境下运行**更具效率**
+- 无需额外操作，游戏服务端文件可在**不同服务端实例之间相互隔离，互不影响**
+- **统一管理**服务端全局变量与启动项，开服更方便
+- **更佳的版本管理与系统环境兼容性**，不必担心Windows系统下的环境配置和版本更新问题
+- 镜像经**多重优化**，尽可能降低服务端所需空间与性能损耗
+- 服务端进程在因意外退出时，可利用Docker特性优雅地**自动重启**，状态可随时更新
+
+### 快速开始
+
 使用Docker前，你需要在Linux系统中先行下载好精简的TTF2 NorthStarCN服务端
 
-```markdown
+```
 wget https://dl.northstar.cool/CDN/Titanfall2/R2N-Dedi-Server.rar
 ```
 并且将服务端内所有文件解压到一个合适的目录中，此处我们将在/home目录下新建一个名为titanfall的文件夹，并且修改文件的读写权限
 (希望您已经提前安装好了unrar)
-```markdown
+```
 mkdir /home/titanfall
 mv R2N-Dedi-Server.rar /home/titanfall
 unrar x R2N-Dedi-Server.rar
@@ -25,9 +42,11 @@ chmod -R 775 /home/titanfall
 
 接下来就是pull我们事先已经编译好的镜像了
 (我真诚地祈祷您已经安装好了Docker并且配置了一个可用的镜像加速器)
-```markdown
-docker pull aichigua/nscn:1.9.0
+
 ```
+docker pull northstarcn-docker.pkg.coding.net/northstarcn/northstarcn-dedi-docker/nscn-docker:1.9.2
+```
+
 该镜像内没有预置其他修改游戏内容的MOD
 
 Pull完成后，我们就可以来启动服务端实例了
@@ -57,7 +76,7 @@ http://1.12.12.12:27000/
 左侧菜单栏
 
 
-### 不使用Docker
+## 不使用Docker
 
 > 在Linux系统上搭建服务器而不使用docker这一利器是相当折腾人的，但是如果你的目的就是学习如何在Linux上使用wine，亦或者你相当享受这种折腾的乐趣，那我也不应该拦着你，对吧。
 
