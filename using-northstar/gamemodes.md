@@ -1,11 +1,4 @@
-<!--
- * @Author: HK560
- * @Date: 2021-12-28 14:05:04
- * @LastEditTime: 2021-12-28 14:06:06
- * @LastEditors: HK560
- * @Description:
- * @FilePath: \NorthStarCN_WIKI\Doc\aboutGamemode.md
--->
+
 # 游戏模式简介
 ## 混战
 ![](https://cdn.jsdelivr.net/gh/HK560/MyPicHub@master/res/pic/20211228140652.png)
