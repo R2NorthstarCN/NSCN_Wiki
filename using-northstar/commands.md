@@ -166,7 +166,7 @@ bind "F4" "toggleconsole"
 | `sv_showhitboxes`                           | Dev / Debug                                                                      | -1      |
 | `sv_showlagcompensation`                    | Dev / Debug                                                                      | 0       |
 | `sv_shutdown`                               | 关闭服务器，与stop效果等同                                               |         |
-| `sv_single_core_dedi`                       | Dev / Debug                                                                      | 0       |
+| `sv_single_core_dedi`                       | Engine Debug，强制服务端进程使用单核                                                                      | 0       |
 | `sv_skyname`                                | Dev / Debug                                                                      |         |
 | `sv_soundscape_printdebuginfo`              | Dev / Debug                                                                      |         |
 | `sv_specaccelerate`                         | Dev / Debug                                                                      | 1000.0  |
@@ -198,5 +198,5 @@ bind "F4" "toggleconsole"
 | `sv_voiceEcho`                              | Dev / Debug                                                                      | 0       |
 | `sv_voiceenable`                            | Dev / Debug                                                                      | 1       |
 | `sv_warnAboutCmdNumJumps`                   | Dev / Debug                                                                      | 20      |
-| `sv_weapon_despawn_time`                    | Dev / Debug                                                                      | 90      |
+| `sv_weapon_despawn_time`                    | 武器掉落在地面后经多少秒消失                                                                      | 90      |
 | `sv_writeSendTableStreamFile`               | Dev / Debug                                                                       |         |
