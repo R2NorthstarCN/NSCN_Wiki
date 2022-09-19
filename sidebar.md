@@ -23,6 +23,6 @@
 
 - **NorthStarCN疑难杂症**
 
-  - [TEST](test.md)
+  - [TEST](installing-northstar/troubleshooting.md)
 
 - **IPv6**
