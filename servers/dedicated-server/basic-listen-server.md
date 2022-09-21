@@ -2,7 +2,7 @@
 
 ## 前言
 
-如果您想使用您的电脑在游戏中创建私人比赛房间(下文简称房间)并使其在服务器浏览器中可见，您需要一个公网IP(即Pubilc IP)
+如果您想使用您的电脑在游戏中创建私人比赛房间(下文简称房间)并使其在服务器浏览器中可见，您需要一个公网IP(即Public IP)
 
 在IPv4资源已经枯竭的当下，所有网络供应商(ISP)都会有倾向地减少向家庭/办公宽带用户提供公网IP资源，转而使用NAT(Network address translation，网络地址转换)，这是一个创建网络端口与IP地址映射关系的网络技术([RFC 1918](https://www.rfc-editor.org/rfc/rfc1918.html)，[RFC 2663](https://www.rfc-editor.org/rfc/rfc2663.html))，利用该项技术，网络供应商就可以在节省IPv4地址资源的同时向用户提供基本网络服务，但这也会导致用户无法被其他网络终端主动访问，这催生出了STUN([RFC 3489](https://www.rfc-editor.org/rfc/rfc3489.html)，[RFC 5389](https://www.rfc-editor.org/rfc/rfc5389.html))等UDP打洞/穿透技术和内网穿透等工具([FRP](https://github.com/fatedier/frp)，[NPS](https://github.com/ehang-io/nps))，但是NorthStar在开发之初就未考虑过嵌套网络的情况，**这导致了上述穿透技术皆因协议问题无法使用**
 
