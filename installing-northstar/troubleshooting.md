@@ -4,7 +4,7 @@
 
 ## 找不到 `Tier0.dll` 
 
-![Failed to load the tier0.dll](../assets/tier0.dll-failure.png)
+![tier0.dll](../assets/tier0.dll-failure.png)
 
 该错误通常是因为您没有把`NorthstarLauncher.exe`及其资源文件放置在正确的目录导致的，请将启动器及其资源文件放置在`Titanfall 2`游戏根目录下
 
@@ -21,25 +21,20 @@
 
 ## LSX Authentication Failed
 
-![LSX Authentication Challenge failed](https://user-images.githubusercontent.com/97235072/148391447-300e1b47-6148-43f7-8854-b0882e150d12.png)
+![LSX](https://user-images.githubusercontent.com/97235072/148391447-300e1b47-6148-43f7-8854-b0882e150d12.png)
 
-If the usual workaround of restarting Origin/rebooting or running the vanilla game first and then Northstar don’t work, try the following:
+若您遇到该问题，请确认您先前已经运行过一次官服，之后请尝试重启Origin或重启电脑，如果这样依旧不能解决该问题，请依次尝试下方的步骤，直至您能进入游戏为止
 
-* First and foremost, double check that you are _logged in_ on Origin. Titanfall will _not_ run if you are not connected to EA servers first (and neither will Titanfall + Northstar).
-* [Add the northstar commandline option in your launcher](#launch-opts)
-* Run the game with Origin/Steam instead of starting NorthstarLauncher.exe (important)
-* Sign out and exit Origin, then start Northstar. It will prompt you for a login, _hopefully_ fixing it if nothing else worked
-* Start normal Titanfall 2 and then Northstar (_ONLY WORKS SOMETIMES_)
+* 请再次确认您已经在Origin客户都安中登陆了一个拥有TitanFall2的Origin账号，并且先前已经运行过一次官服！
+* [在Origin或Steam中添加启动项](#launch-opts)，使用Steam/Origin来代替`Northstarlauncher.exe`启动游戏
+* 退出登录Origin，并将Origin彻底关闭，之后启动`Northstarlauncher.exe`，这将需要您重新登录Origin，完成登录后，则应该可以进入游戏
 
 
+## File Corruption Detected
 
-* If you dont have them verify your game on steam/origin/ea
 
-## File Corruption Detected <a href="#file-corruption" id="file-corruption"></a>
-
-{% hint style="info" %}
 Make sure you updated [Northstar to version v1.4.0 or higher](https://github.com/R2Northstar/Northstar/releases/) as this version features changes that address this problem.
-{% endhint %}
+
 
 ![Engine Error: File corruption detected. Please repair or re-install the game.](https://user-images.githubusercontent.com/39478251/147338706-74797220-7d7f-4c81-9ba0-d88e29a2a1e2.png)
 

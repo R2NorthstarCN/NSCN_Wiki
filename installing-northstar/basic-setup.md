@@ -36,12 +36,3 @@
 ```
 -multiple -novid -high
 ```
-
-## Linux平台
-
-Linux请参考 [这里](installing-northstar/playing-on-linux.md#如何在🐧Linux发行版上游玩NorthStarCN(TODO))
-
-## SteamDeck平台
-
-TODO.
-Awaiting Editing.

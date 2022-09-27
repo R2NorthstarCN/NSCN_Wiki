@@ -11,7 +11,7 @@
 在SSH终端输入以下指令即可Pull最新版本NorthStarCN Docker服务端运行镜像
 
 ```
-docker pull northstarcn-docker.pkg.coding.net/northstarcn/northstarcn-dedi-docker/nscn-docker:1.9.2
+docker pull northstarcn-docker.pkg.coding.net/northstarcn/northstarcn-dedi-docker/nscn-docker:latest
 ```
 
 ### 优势
