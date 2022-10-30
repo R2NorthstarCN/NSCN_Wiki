@@ -3,7 +3,7 @@
   - [序言](README.md)
   - [贡献者列表](contributors.md)
 
-- **NorthStarCN使用教程**
+- **使用教程**
 
   - [安装&启动&更新](installing-northstar/basic-setup.md)
   - [游戏启动项](using-northstar/launch-arguments.md)
@@ -13,14 +13,14 @@
   - [服务器浏览器](using-northstar/server-browser.md)
   - [以您的电脑作为主机进行多人游戏](servers/dedicated-server/basic-listen-server.md)
 
-- **NorthStarCN服务端搭建**
+- **服务端**
 
   - [服务端环境要求](servers/dedicated-server/basic-requirements.md)
   - [独立服务端](servers/dedicated-server/README.md)
   - [Windows端搭建实践](TEST.md)
   - [RCON(远程控制台)](servers/dedicated-server/RCON.md)
 
-- **NorthStarCN疑难杂症**
+- **疑难杂症**
 
   - [NorthStarCN游戏故障排除](installing-northstar/troubleshooting.md)
 
