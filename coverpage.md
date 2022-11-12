@@ -2,7 +2,7 @@
 
 ![logo](../assets/logo_1k.png)
 
-# NorthStarCN <small>1.9.7</small>
+# NorthStarCN <small>1.10.9</small>
 
 > 一个开放式的TitanFall 2 MOD与自定义服务器框架
 
