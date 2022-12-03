@@ -6,7 +6,7 @@
 
 ## Docker
 
-[![构建状态](https://img.shields.io/badge/docker%20build-passing-brightgreen)](https://northstarcn.coding.net/public-artifacts/northstarcn/northstarcn-dedi-docker/nscn-docker/version/17634532/overview)
+[![构建状态](https://img.shields.io/badge/docker%20build-passing-brightgreen)](https://northstarcn.coding.net/public-artifacts/northstarcn/northstarcn-dedi-docker/nscn-docker/version/19159335/overview)
 
 在SSH终端输入以下指令即可Pull最新版本NorthStarCN Docker服务端运行镜像
 
@@ -28,7 +28,7 @@ docker pull northstarcn-docker.pkg.coding.net/northstarcn/northstarcn-dedi-docke
 使用Docker前，你需要在Linux系统中先行下载好精简的TTF2 NorthStarCN服务端
 
 ```
-wget https://dl.northstar.cool/CDN/Titanfall2/R2N-Dedi-Server.rar
+wget https://dl.d3-3109.cc/d/TTF2/R2N-Dedi-Server.rar
 ```
 并且将服务端内所有文件解压到一个合适的目录中，此处我们将在/home目录下新建一个名为titanfall的文件夹，并且修改文件的读写权限
 (希望您已经提前安装好了unrar)
@@ -41,18 +41,16 @@ chmod -R 775 /home/titanfall
 解压完成后，你可以自行删除R2N-Dedi-Server.rar，也可以把它留着
 
 接下来就是pull我们事先已经编译好的镜像了
-(我真诚地祈祷您已经安装好了Docker并且配置了一个可用的镜像加速器)
 
 ```
-docker pull northstarcn-docker.pkg.coding.net/northstarcn/northstarcn-dedi-docker/nscn-docker:1.9.2
+docker pull northstarcn-docker.pkg.coding.net/northstarcn/northstarcn-dedi-docker/nscn-docker:latest
 ```
-
-该镜像内没有预置其他修改游戏内容的MOD
 
 Pull完成后，我们就可以来启动服务端实例了
 ```markdown
-docker run --rm --interactive --pull always --publish 8081:8081/tcp --publish 37015:37015/udp --mount "type=bind,source=/home/titanfall,target=/mnt/titanfall,readonly" --env NS_SERVER_NAME="[CN] This is a Server running on Docker!" aichigua/nscn:1.9.0
+docker run --rm --interactive --pull always --publish 37006:37006/tcp --publish 37005:37005/udp --mount "type=bind,source=/home/titanfall,target=/mnt/titanfall,readonly" --env "NS_SERVER_NAME=[D3] 20\\u4eba TTDM \\u4f60\\u8bf4\\u5f97\\u5bf9\\u4f46\\u662f\\u4f60\\u8bf4\\u5f97\\u5bf9" "NS_SERVER_DESC=\\u6211\\u4e5f\\u4e0d\\u77e5\\u9053\\u4e3a\\u4ec0\\u4e48\\u4f60\\u4eec\\u90a3\\u4e48\\u559c\\u6b22\\u73a9\\u0032\\u0030\\u4eba\\u0054\\u0054\\u0044\\u004d" "NS_PORT=37005" "NS_PORT_AUTH=37006" "NS_EXTRA_ARGUMENTS=+ns_server_reg_token xxxxxxxxxxxxxxxxxxxxxxxxxxxx +net_compresspackets 1 +net_compresspackets_minsize 64 +sv_maxrate 127000 +map mp_homestead +ns_private_match_last_mode "ttdm" +setplaylist ttdm +mp_gamemode ttdm +ns_should_return_to_lobby 0 +ns_private_match_only_host_can_change_settings 2 +setplaylistvaroverrides "respawn_delay 15 max_players 20"" northstarcn-docker.pkg.coding.net/northstarcn/northstarcn-dedi-docker/nscn-docker:latest
 ```
+
 当然，这样做似乎并不能实现实现多实例与集群管理，尤其是在配置env环境变量时，使用命令行传入十分容易出错，所以，在启动服务端实例前，我们向您推荐Portainer这一Docker管理面板，它将是您管理NorthStarCN服务器的利器
 
 ```markdown
@@ -75,9 +73,5 @@ http://1.12.12.12:27000/
 
 左侧菜单栏
 
-
-## 不使用Docker
-
-> 在Linux系统上搭建服务器而不使用docker这一利器是相当折腾人的，但是如果你的目的就是学习如何在Linux上使用wine，亦或者你相当享受这种折腾的乐趣，那我也不应该拦着你，对吧。
 
 
