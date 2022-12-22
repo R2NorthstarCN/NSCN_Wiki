@@ -17,7 +17,7 @@
 
   - [服务端环境要求](servers/dedicated-server/basic-requirements.md)
   - [独立服务端](servers/dedicated-server/README.md)
-  - [Windows端搭建实践](TEST.md)
+  - [Windows端搭建实践](servers/dedicated-server/hosting-on-windows.md)
   - [RCON(远程控制台)](servers/dedicated-server/RCON.md)
 
 - **疑难杂症**

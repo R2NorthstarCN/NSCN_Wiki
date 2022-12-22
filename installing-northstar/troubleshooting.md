@@ -25,7 +25,7 @@
 
 若您遇到该问题，请确认您先前已经运行过一次官服，之后请尝试重启Origin或重启电脑，如果这样依旧不能解决该问题，请依次尝试下方的步骤，直至您能进入游戏为止
 
-* 请再次确认您已经在Origin客户都安中登陆了一个拥有TitanFall2的Origin账号，并且先前已经运行过一次官服！
+* 请再次确认您已经在EA Desktop客户端中登陆了一个拥有TitanFall 2的账号，并且先前已经运行过一次官服！
 * [在Origin或Steam中添加启动项](#launch-opts)，使用Steam/Origin来代替`Northstarlauncher.exe`启动游戏
 * 退出登录Origin，并将Origin彻底关闭，之后启动`Northstarlauncher.exe`，这将需要您重新登录Origin，完成登录后，则应该可以进入游戏
 

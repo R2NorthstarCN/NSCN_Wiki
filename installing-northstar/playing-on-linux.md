@@ -2,18 +2,18 @@
 > **this page is on editing phase at present**
 > **此页尚未完成编辑**
 
-> 如您所见，NorthStarCN和TTF2均不是为Linux发行版所编写和构建的软件，所以为了在POSIX类系统上运行这些程序，我们需要使用像Proton和Wine这样的兼容层来进行。
+> 如您所见，NorthStarCN和TTF2均不是为Linux发行版所编写和构建的软件，所以为了在POSIX类系统上运行这些程序，我们需要使用像Proton或Wine这样的兼容层来进行。
 
 ## 安装NorthStarCN
 
 > 在开始安装NorthStarCN前，您应该首先安装好Proton或Wine，关于如何在Linux发行版上安装这两种兼容层已经有足够多的中文文档，此处故不再赘述
 
-### Steam (Proton) 
+### Steam Play (Proton) 
 
 > "Proton 是允许 Windows 游戏在 Linux 上运行的兼容层，它通过使用修改过的 Wine 版本和一套高性能图形 API 实现来达到这一点。 我们的团队开发并优化 Proton 已有一段时间，Proton 现已有较高覆盖率。 Proton 已支持大多数 API，大部分游戏可直接运行。 我们正在持续改善 Proton 的兼容性，而我们的目标是尽可能地接近 100% 覆盖率。"      
-  ----Steam Dev
+  ----Steam Devs
 
-> **Note.** 您可以访问[ProtonDB](https://www.protondb.com/)来查看当前Proton可以运行的Windows游戏
+> **Note.** 您可以访问[ProtonDB](https://www.protondb.com/)来查看当前Proton可以运行的Windows游戏及其兼容性评分
 
 > NorthStar创建了一个针对NorthStar优化的Proton分支，目前NorthStar Wiki推荐Linux Steam端和Steam Deck玩家使用该版本，但NorthStarCN并未在该版本上进行测试，故先保留该先前版本文档
 
@@ -41,7 +41,7 @@ ln NorthstarLauncher.exe Titanfall2.exe
 4. **如果您先前已经把TTF2游戏添加到了Lutris管理器内:** 右键点击 _Titanfall 2_ > _Configure_ > _Game Options_ > 将 _Executable path_ 设置为 _NorthStarCNLauncher.exe_
 5. **如果没有:** 点击左侧顶部的 `+` 按钮 > 根据您的喜好设定一个名称，并且将 _Runner_ 改为 _Wine_ > 点击 _Game options_ > 将 _Executable path_ 设置为 _NorthstarLauncher.exe_ 之后保存.
 
-> **如果您已经通过Steam安装了TTF2:** 将 _Wine prefix_ 设置为 `(你的Steam根目录)/steamapps/compatdata/1237970/pfx/`. 这样就不必再去下载一次Origin了.
+> **如果您已经通过Steam安装了TTF2:** 将 _Wine prefix_ 设置为 `(你的Steam根目录)/steamapps/compatdata/1237970/pfx/`. 这样就不必再去Origin下载一次了.
 
 现在通过Lutris启动TTF2时，NorthStarCN将会被自动启动.首次启动游戏时，您应该会看到[上文](installing-northstar/basic-setup.md#安装NorthStarCN)中所出现的询问窗口.
 

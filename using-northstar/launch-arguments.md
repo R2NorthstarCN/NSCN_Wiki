@@ -1,27 +1,34 @@
 # 游戏启动项
 
-游戏客户端启动项应写入 `ns_startup_args.txt` 中.
+尽管在运行游戏时您需要将`Origin`或`EA Desktop`保持在后台运行，但是启动器默认并不能读取`Origin`或`EA Desktop`中您设置的附加启动项，您可以将所需要的启动项添加至 `ns_startup_args.txt`, 该文件位于TTF2游戏的根目录中
+
+例如:
+```
+-multiple -novid -high
+```
+
+游戏客户端的启动项应写入 `ns_startup_args.txt` 中.
 
 |         启动项         |               描述              |            接受值            |
 | :----------------: | :---------------------------: | :-----------------------: |
 |   `-disablelogs`   |          禁用日志记录         |                           |
-|     `-vanilla`     |            启动原版游戏           |                           |
-|    `-northstar`    |            启动NorthStarCN            |                           |
 |    `-dedicated`    |       以独立服务端模式（无图形界面）启动       |                           |
 |     `-language`    |           指定客户端的语言          | 例如: `portuguese`，`english`  |
 | `-waitfordebugger ` |        启动时等待调试程序附加到游戏，完成HOOK后再运行游戏      |                           |
 |     `-profile=`    | 您可以创建多个不同版本的R2Northstar文件夹的副本，并为这些文件夹重新命名，在启动时可以加入该启动项指定加载哪一个文件夹的配置文件，默认值: R2Northstar | 例如: `-profile="devR2"` |
-| `-enablechathooks` |        将聊天框与控制台连接，允许玩家在聊天框执行指令，通常在独立服务端模式使用     |                           |
+| `-enablechathooks` |        将聊天框与控制台终端连接，允许玩家在聊天框执行指令，通常在独立服务端模式使用     |                           |
+|  `-noplugins`            |     禁用插件系统   |       |
 
-#### 起源自带的启动项
 
-|     参数     |     描述    |
+以下是起源引擎自带的部分启动项
+
+|     启动项     |     描述    |
 | :--------: | :-------: |
 |  `-novid`  | 禁用启动页视频 |
 | `-nosound` |  禁用游戏声音 |
 
-#### Linux可选启动项
+#### 环境变量(Linux)
 
 |  变量名  |                                 描述                                |     接受值    |
 | :---: | :---------------------------------------------------------------: | :--------: |
-| `LFX` | 启用 [LatencyFleX](../playing-on-linux.md#latencyflex) (仅Linux可用，启用前需要安装前置环境) | `0` or `1` |
+| `LFX` | 启用 [LatencyFleX](../playing-on-linux.md#latencyflex) (仅Linux可用，启用前需要安装前置环境) | `0-1` |

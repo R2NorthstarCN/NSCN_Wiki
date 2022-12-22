@@ -29,12 +29,3 @@
 您并不需要手动更新NorthStarCN，使用`北极星CN安装器.exe` 点击`更新/修复北极星 CN`即可自动更新北极星CN，您的配置文件在更新安装前将会被自动备份
 
 若您因其他情况导致不能使用`北极星CN安装器.exe`的，可以到我们的官网下载最新版本的启动器压缩包文件，之后将压缩包内所有文件解压覆盖至您的TitanFall 2游戏根目录下即可，请注意备份好您的`ns_startup_args.txt`或`ns_startup_args_dedi.txt`中启动项的设置，若有特殊情况，请查看我们的[KOOK服务器](https://kook.top/qetaS2)或[QQ吹水群](https://jq.qq.com/?_wv=1027&k=Dk5g9Okj)
-
-## 游戏启动项
-
-尽管在运行游戏时您需要将`Origin`或`EA Desktop`保持在后台运行，但是启动器默认并不能读取`Origin`或`EA Desktop`中您设置的附加启动项，您可以将所需要的启动项添加至 `ns_startup_args.txt`, 该文件位于TTF2游戏的根目录中
-
-例如:
-```
--multiple -novid -high
-```
