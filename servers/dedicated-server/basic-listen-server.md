@@ -131,16 +131,6 @@ IP地址填写PC在局域网中分配到的IP地址，此处为`192.168.31.131`
 
 ## 实用指令
 
-您可以在控制台通过以下指令更改地图与模式:
-
-```
-sv_cheats 1     #更改地图前需要先启用作弊
-script GameRules_ChangeMap( "mp_forwardbase_kodai", "ctf" )
-sv_cheats 0      #更改完成后关闭作弊
-```
-
-您可以将 `mp_forwardbase_kodai` 与 `ctf` 替换为您想更改为的地图与模式 
-
 将`ns_private_match_only_host_can_change_settings` 设置为 `2`，之后只有房主才有权限更改房间参数
 
 将 `ns_private_match_countdown_length` 设置为 `1` 用来跳过开始游戏前的倒计时
