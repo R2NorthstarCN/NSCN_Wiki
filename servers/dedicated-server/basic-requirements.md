@@ -2,12 +2,12 @@
 
 **服务器系统&硬件最低要求:**
 
-* Windows 7/Server 2008 及更高版本的操作系统，此处推荐Windows Server 2012 R2
-* DirectX 11 / DXVK环境
+* Windows 10/Server 2016 及更高版本的操作系统，此处推荐Windows Server 2016
+* DirectX 11.2 / DXVK环境(Win10或者Windows Server 2016不用管这个，系统集成了DX12)
 * 10GB 的空闲磁盘空间
 * 至少3个CPU线程
 * 至少4GB的运行内存
-* 一个可用的公网IP
+* 一个公网IP
 
 
 **单一服务端进程所占用的资源:**

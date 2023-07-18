@@ -34,6 +34,7 @@ e.g: `+setplaylist ps +mp_gamemode ps`
 | `-maxplayersplaylist` | 允许 [游戏参数覆写](servers/dedicated-server/README#游戏参数覆写) 覆写最大玩家数 |
 | `-enablechathooks`    | 允许在聊天框中直接输入指令                                         |
 | `-allowdupeaccounts`  | 允许服务器内同时存在多名相同ID玩家进行游戏  |
+| `+ns_server_reg_token`| 在线服务器注册所需要的凭证token e.g:+ns_server_reg_token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx|
 
 ### 游戏参数覆写
 
